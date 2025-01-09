@@ -8,6 +8,9 @@ import org.poo.account.Account;
 import org.poo.bank.Bank;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
+import org.poo.users.ServiceFactory;
+import org.poo.users.ServicePlan;
+import org.poo.users.Silver;
 import org.poo.users.User;
 
 @Getter
@@ -50,20 +53,27 @@ public final class CardPayment implements Transactions {
         if (account != null && card.getStatus().equals("active")) {
             amount = bank.getMoneyConversion().convertMoney(currency, account.getCurrency(),
                     amount);
-            if (potentialBuyer.equals(user) && account.getBalance() >= amount) {
+            double newAmount = amount;
+            newAmount += potentialBuyer.getServicePlan().calculateCommission(newAmount, bank, currency);
+
+            if (potentialBuyer.equals(user) && account.getBalance() >= newAmount) {
+                double amountInRon = bank.getMoneyConversion().convertMoney(account.getCurrency(), "RON", amount);
+                if (amountInRon > 300 && potentialBuyer.getServicePlan().getPlan().equals("silver")) {
+                    Silver silverPlan = (Silver)potentialBuyer.getServicePlan();
+                    silverPlan.setPurchases(silverPlan.getPurchases() + 1);
+                    if (silverPlan.getPurchases() == 5) { // upgrade la gold
+                        ServicePlan newPlan = ServiceFactory.createService(ServiceFactory.ServiceType.Gold);
+                        potentialBuyer.setServicePlan(newPlan);
+                    }
+                }
                 if (card.getType().equals("oneTime")) {
                     oneTimeCard = true;
                 }
 
-                // Paying for the first time to this commerciant or not
-                if (!account.commerciantExist(commerciant)) {
-                    account.getCommerciants().add(new Commerciant(commerciant, amount));
-                } else {
-                    int foundIndex = account.findCommerciant(commerciant);
-                    Commerciant found = account.getCommerciants().get(foundIndex);
-                    found.setAmountReceived(found.getAmountReceived() + amount);
-                }
-                account.setBalance(account.getBalance() - amount);
+                Commerciant com = bank.getCommerciant(commerciant);
+                com.getCashback().pay(amount, com, user, account, bank);
+
+                account.setBalance(account.getBalance() - newAmount);
                 success = true;
             }
         }

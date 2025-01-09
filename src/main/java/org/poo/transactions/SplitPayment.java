@@ -50,13 +50,15 @@ public final class SplitPayment implements Transactions {
     public void execute() {
         ArrayList<Double> amountToBeExtracted = new ArrayList<>();
         for (Account account : accounts) {
-            double specificAmount = bank.getMoneyConversion().convertMoney(currency,
-                    account.getCurrency(), amountPerPerson);
-            if (specificAmount > account.getBalance()) {
-                success = false;
-                notEnoughMoney = account.getIban();
+            if (account != null) {
+                double specificAmount = bank.getMoneyConversion().convertMoney(currency,
+                        account.getCurrency(), amountPerPerson);
+                if (specificAmount > account.getBalance()) {
+                    success = false;
+                    notEnoughMoney = account.getIban();
+                }
+                amountToBeExtracted.add(specificAmount);
             }
-            amountToBeExtracted.add(specificAmount);
         }
 
         // The payment is valid and money are deducted from every account

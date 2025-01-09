@@ -280,4 +280,31 @@ public final class Converter {
         text.put("timestamp", timeStamp);
         output.add(text);
     }
+
+    public void cashWithdrawalError(final int timeStamp, final int errorType) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "cashWithdrawal");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        if (errorType == 1)
+            message.put("description", "Card not found");
+        else
+            message.put("description", "User not found");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
+
+    public void sendMoneyError(final int timeStamp) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "sendMoney");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        message.put("description", "User not found");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
 }

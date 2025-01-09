@@ -83,14 +83,17 @@ public final class Main {
         ArrayNode output = objectMapper.createArrayNode();
 
         MoneyConversion convertMoney = new MoneyConversion(inputData.getExchangeRates());
-        Bank newBank = new Bank(inputData.getUsers(), convertMoney);
+        Bank newBank = new Bank(inputData.getUsers(), convertMoney, inputData.getCommerciants());
         ControlTransactions control = new ControlTransactions();
         Converter converter = new Converter(output);
 
+
         for (CommandInput input : inputData.getCommands()) {
             Command command = CommandFactory.createCommand(input, newBank, converter, control);
-            command.execute();
+            if (command != null) // inca nu sunt implementate toate comenzile
+                command.execute();
         }
+        Utils.resetRandom();
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);

@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.account.AccountFactory;
 
+import org.poo.account.BusinessAccount;
 import org.poo.users.User;
 import org.poo.utils.Utils;
 
@@ -43,6 +44,12 @@ public final class CreateAccount implements Transactions {
             account = AccountFactory.createAccount(AccountFactory.AccountType.savings, balance,
                     currency, iban, interestRate);
             user.getAccounts().add(account);
+        } else if (type.equals("business")) {
+            account = AccountFactory.createAccount(AccountFactory.AccountType.business, balance,
+                    currency, iban);
+            user.getAccounts().add(account);
+            BusinessAccount newAccount = (BusinessAccount) account;
+            newAccount.setOwner(user);
         }
     }
 

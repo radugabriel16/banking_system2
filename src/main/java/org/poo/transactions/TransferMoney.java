@@ -53,11 +53,15 @@ public final class TransferMoney implements Transactions {
         String currencySender = accountSender.getCurrency();
         String currencyReceiver = accountReceiver.getCurrency();
 
-        if (accountSender.getBalance() >= amount) {
-            accountSender.setBalance(accountSender.getBalance() - amount);
-            double newAmount = bank.getMoneyConversion().convertMoney(currencySender,
+        User user = bank.findUser(accountSender.getIban());
+        double newAmount = amount;
+        newAmount += user.getServicePlan().calculateCommission(amount, bank, accountSender.getCurrency());
+
+        if (accountSender.getBalance() >= newAmount) {
+            accountSender.setBalance(accountSender.getBalance() - newAmount);
+            double receiverAmount = bank.getMoneyConversion().convertMoney(currencySender,
                     currencyReceiver, amount);
-            accountReceiver.setBalance(accountReceiver.getBalance() + newAmount);
+            accountReceiver.setBalance(accountReceiver.getBalance() + receiverAmount);
             success = true;
         }
     }

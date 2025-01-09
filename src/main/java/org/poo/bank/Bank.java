@@ -4,7 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.card.Card;
+import org.poo.commerciants.Commerciant;
 import org.poo.exchange_rate.MoneyConversion;
+import org.poo.fileio.CommandInput;
+import org.poo.fileio.CommerciantInput;
 import org.poo.fileio.UserInput;
 import org.poo.users.User;
 
@@ -15,13 +18,21 @@ import java.util.ArrayList;
 public class Bank implements Visitable {
     private ArrayList<User> bankUsers = new ArrayList<>();
     private MoneyConversion moneyConversion;
+    private ArrayList<Commerciant> commerciants = new ArrayList<>();
 
-    public Bank(final UserInput[] users, final MoneyConversion moneyConversion) {
+    public Bank(final UserInput[] users, final MoneyConversion moneyConversion,
+                final CommerciantInput[] com) {
         for (UserInput user : users) {
-            User newUser = new User(user.getFirstName(), user.getLastName(), user.getEmail());
+            User newUser = new User(user.getFirstName(), user.getLastName(), user.getEmail(),
+                    user.getBirthDate(), user.getOccupation());
             bankUsers.add(newUser);
         }
         this.moneyConversion = moneyConversion;
+        for (CommerciantInput commerciant : com) {
+            Commerciant newCom = new Commerciant(commerciant.getCommerciant(), commerciant.getId(),
+                    commerciant.getAccount(), commerciant.getType(), commerciant.getCashbackStrategy());
+            commerciants.add(newCom);
+        }
     }
 
     /**
@@ -181,5 +192,16 @@ public class Bank implements Visitable {
 
     public void accept(final Visitor visitor, final String iban, final double amount) {
         visitor.visit(this, iban, amount);
+    }
+
+    public Commerciant getCommerciant(String name) {
+        for (Commerciant commerciant : commerciants) {
+            if (commerciant != null) {
+                if (commerciant.getName().equals(name)) {
+                    return commerciant;
+                }
+            }
+        }
+        return null;
     }
 }

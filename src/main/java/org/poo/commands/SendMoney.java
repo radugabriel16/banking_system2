@@ -3,6 +3,7 @@ package org.poo.commands;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.Bank;
+import org.poo.converter.Converter;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.ControlTransactions;
 import org.poo.transactions.TransferMoney;
@@ -14,12 +15,14 @@ public final class SendMoney implements Command {
     private CommandInput input;
     private Bank bank;
     private ControlTransactions control;
+    private Converter convert;
 
     public SendMoney(final CommandInput input, final Bank bank,
-                     final ControlTransactions control) {
+                     final ControlTransactions control, final Converter convert) {
         this.input = input;
         this.bank = bank;
         this.control = control;
+        this.convert = convert;
     }
 
     @Override
@@ -33,7 +36,11 @@ public final class SendMoney implements Command {
         User senderUser = bank.findUser(sender);
         User receiverUser = bank.findUser(receiver);
 
-        if (bank.findAccount(sender) != null && !bank.searchedAfterAlias(sender)
+        if (bank.findUser(receiver) == null || bank.findUser(sender) == null) {
+            convert.sendMoneyError(timeStamp);
+        }
+
+        else if (bank.findAccount(sender) != null && !bank.searchedAfterAlias(sender)
                 && bank.findAccount(receiver) != null) {
             TransferMoney transfer = new TransferMoney(bank.findAccount(sender),
                     bank.findAccount(receiver), amount, description, bank, timeStamp,

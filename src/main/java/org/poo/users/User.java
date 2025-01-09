@@ -6,6 +6,8 @@ import org.poo.account.Account;
 import org.poo.commerciants.Commerciant;
 import org.poo.transactions.CardPayment;
 import org.poo.transactions.Transactions;
+import java.time.LocalDate;
+import java.time.Period;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,13 +18,26 @@ public final class User implements Visitable {
     private String firstName;
     private String lastName;
     private String email;
+    private String birthDate;
+    private String occupation;
+    private ServicePlan servicePlan;
     private ArrayList<Account> accounts = new ArrayList<>();
     private ArrayList<Transactions> history = new ArrayList<>();
+    private int transactionsCount;
+    private double spentMoney;
 
-    public User(final String firstName, final String lastName, final String email) {
+    public User(final String firstName, final String lastName, final String email,
+                final String birthDate, final String occupation) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.birthDate = birthDate;
+        this.occupation = occupation;
+        if (occupation.equals("student")) {
+            servicePlan = ServiceFactory.createService(ServiceFactory.ServiceType.Student);
+        } else {
+            servicePlan = ServiceFactory.createService(ServiceFactory.ServiceType.Standard);
+        }
     }
 
     /**
@@ -85,5 +100,16 @@ public final class User implements Visitable {
         }
         account.sortCommerciants(current);
         return current;
+    }
+
+    public int getAge() {
+        String[] members = birthDate.split("-");
+        int year = Integer.parseInt(members[0]);
+        int month = Integer.parseInt(members[1]);
+        int day = Integer.parseInt(members[2]);
+
+        LocalDate birthDate = LocalDate.of(year, month, day);
+        Period period = Period.between(birthDate, LocalDate.now());
+        return period.getYears();
     }
 }

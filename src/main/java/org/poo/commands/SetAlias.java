@@ -20,6 +20,7 @@ public final class SetAlias implements Command {
     public void execute() {
         String alias = input.getAlias();
         String iban = input.getAccount();
-        bank.findAccount(iban).setAlias(alias);
+        if (bank.findAccount(iban) != null)
+            bank.findAccount(iban).setAlias(alias);
     }
 }

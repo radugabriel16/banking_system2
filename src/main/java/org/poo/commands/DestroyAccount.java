@@ -31,13 +31,15 @@ public final class DestroyAccount implements Command {
         String iban = input.getAccount();
         DeleteAccount delete = new DeleteAccount();
         int timeStamp = input.getTimestamp();
-        if (bank.findAccount(email, iban).getBalance() == 0) {
-            bank.findUser(email).accept(delete, bank.findAccount(email, iban));
-            convert.deleteAccount(timeStamp);
-        } else {
-            convert.deleteAccountFailed(timeStamp);
-            ErrorDelete deleteTransaction = new ErrorDelete(timeStamp, iban);
-            control.edit(deleteTransaction, bank.findUser(email));
+        if (bank.findAccount(email, iban) != null) {
+            if (bank.findAccount(email, iban).getBalance() == 0) {
+                bank.findUser(email).accept(delete, bank.findAccount(email, iban));
+                convert.deleteAccount(timeStamp);
+            } else {
+                convert.deleteAccountFailed(timeStamp);
+                ErrorDelete deleteTransaction = new ErrorDelete(timeStamp, iban);
+                control.edit(deleteTransaction, bank.findUser(email));
+            }
         }
     }
 }

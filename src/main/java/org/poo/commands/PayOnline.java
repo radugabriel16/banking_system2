@@ -38,7 +38,7 @@ public final class PayOnline implements Command {
         int timeStamp = input.getTimestamp();
         if (bank.findOwnerCard(cardNumber) == null) {
             convert.cardPayment(timeStamp);
-        } else {
+        } else if (amount > 0){
             Card card = bank.findCard(cardNumber);
             Account account = bank.findParentAccount(cardNumber);
             CardPayment payment = new CardPayment(cardNumber, amount, currency,

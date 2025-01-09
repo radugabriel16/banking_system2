@@ -2,7 +2,7 @@ package org.poo.account;
 
 public class AccountFactory {
     public enum AccountType {
-        classic, savings
+        classic, savings, business
     }
 
     /**
@@ -16,6 +16,7 @@ public class AccountFactory {
         switch (type) {
             case classic: return new ClassicAccount(balance, currency, iban);
             case savings: return new SavingsAccount(balance, currency, iban, (double) params[0]);
+            case business: return new BusinessAccount(balance, currency, iban);
             default: throw new IllegalArgumentException("That account type is not supported");
         }
     }
