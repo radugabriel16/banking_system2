@@ -73,6 +73,13 @@ public final class CardPayment implements Transactions {
                 Commerciant com = bank.getCommerciant(commerciant);
                 com.getCashback().pay(amount, com, user, account, bank);
 
+                if (account.getPayments().get(commerciant) != null) {
+                    double currentSpent = account.getPayments().get(commerciant);
+                    account.getPayments().put(commerciant, currentSpent + amount);
+                } else {
+                    account.getPayments().put(commerciant, amount);
+                }
+
                 account.setBalance(account.getBalance() - newAmount);
                 success = true;
             }

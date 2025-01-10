@@ -33,9 +33,7 @@ public final class SpendingsReport implements Command {
         Account account = bank.findAccount(iban);
         if (account != null) {
             User user = bank.findUser(iban);
-            ArrayList<Commerciant> list = user.editCommerciantsAmounts(account, start,
-                    end);
-            convert.spendingsReport(timeStamp, account, user, start, end, list);
+            convert.spendingsReport(timeStamp, account, user, start, end, account.getPayments());
         } else {
             convert.accountErrorReport(timeStamp, 1);
         }

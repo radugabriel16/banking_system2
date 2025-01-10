@@ -12,7 +12,9 @@ import org.poo.transactions.CardPayment;
 import org.poo.transactions.Transactions;
 import org.poo.users.User;
 
+import java.security.Key;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Getter
 @Setter
@@ -196,7 +198,7 @@ public final class Converter {
 
     public void spendingsReport(final int timeStamp, final Account account, final User user,
                                 final int start, final int end,
-                                final ArrayList<Commerciant> list) {
+                                final HashMap<String, Double> comm) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
         text.put("command", "spendingsReport");
@@ -226,10 +228,10 @@ public final class Converter {
             message.set("transactions", transactions);
 
             ArrayNode commerciants = mapper.createArrayNode();
-            for (int i = 0; i < list.size(); i++) {
+            for (String key : comm.keySet()) {
                 ObjectNode commerciant = mapper.createObjectNode();
-                commerciant.put("commerciant", list.get(i).getName());
-                commerciant.put("total", list.get(i).getAmountReceived());
+                commerciant.put("commerciant", key);
+                commerciant.put("total", comm.get(key));
                 commerciants.add(commerciant);
             }
             message.set("commerciants", commerciants);

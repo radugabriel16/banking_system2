@@ -73,6 +73,11 @@
     "cardHolder" : "Caroline_Leleu@outlook.fr",
     "account" : "RO58POOB7344468893732422"
   }, {
+    "timestamp" : 612,
+    "description" : "Interest rate income",
+    "amount" : 47.92,
+    "currency" : "EUR"
+  }, {
     "timestamp" : 614,
     "description" : "Cash withdrawal of 639.0",
     "amount" : 639.0
@@ -89,6 +94,11 @@
     "card" : "8207906978464446",
     "cardHolder" : "Caroline_Leleu@outlook.fr",
     "account" : "RO58POOB7344468893732422"
+  }, {
+    "timestamp" : 612,
+    "description" : "Interest rate income",
+    "amount" : 47.92,
+    "currency" : "EUR"
   }, {
     "timestamp" : 614,
     "description" : "Cash withdrawal of 639.0",
@@ -109,6 +119,11 @@
     "card" : "8207906978464446",
     "cardHolder" : "Caroline_Leleu@outlook.fr",
     "account" : "RO58POOB7344468893732422"
+  }, {
+    "timestamp" : 612,
+    "description" : "Interest rate income",
+    "amount" : 47.92,
+    "currency" : "EUR"
   }, {
     "timestamp" : 614,
     "description" : "Cash withdrawal of 639.0",

@@ -14,10 +14,11 @@ import java.util.List;
 
 @Getter
 @Setter
-public final class SplitPayment implements Transactions {
+public class SplitCustom implements Transactions {
     private int timeStamp;
     private String currency;
-    private double amountPerPerson;
+    private double amount;
+    private ArrayList<Double> amountList = new ArrayList<>();
     private ArrayList<Account> accounts = new ArrayList<>();
     private boolean success = true;
     private Bank bank;
@@ -25,22 +26,24 @@ public final class SplitPayment implements Transactions {
     private String currentIban;
     private int status;
 
-    public SplitPayment(final int timeStamp, final String currency, final double amount,
-                        final Bank bank, final List<String> iban, final int status) {
+    public SplitCustom(int timeStamp, String currency, double amountTotal, List<Double> amount, Bank bank, List<String> iban,
+                       int status) {
         this.timeStamp = timeStamp;
         this.currency = currency;
-        this.amountPerPerson = amount / iban.size();
         this.bank = bank;
+        this.amount = amountTotal;
+        this.amountList.addAll(amount);
         for (int i = 0; i < iban.size(); i++) {
             accounts.add(bank.findAccount(iban.get(i)));
         }
         this.status = status;
     }
 
-    public SplitPayment(final SplitPayment original) {
+    public SplitCustom(final SplitCustom original) {
         this.timeStamp = original.timeStamp;
         this.currency = original.currency;
-        this.amountPerPerson = original.amountPerPerson;
+        this.amount = original.amount;
+        this.amountList.addAll(original.amountList);
         this.bank = original.bank;
         this.success = original.success;
         this.notEnoughMoney = original.notEnoughMoney;
@@ -53,19 +56,19 @@ public final class SplitPayment implements Transactions {
     public void execute() {
         if (status == 1) {
             ArrayList<Double> amountToBeExtracted = new ArrayList<>();
-            for (Account account : accounts) {
-                if (account != null) {
-                    double specificAmount = bank.getMoneyConversion().convertMoney(currency,
-                            account.getCurrency(), amountPerPerson);
-                    if (specificAmount > account.getBalance()) {
+            for (int i = 0; i < accounts.size(); i++) {
+                if (accounts.get(i) != null) {
+                    String accountCurrency = accounts.get(i).getCurrency();
+                    double sum = amountList.get(i);
+                    double neededMoney = bank.getMoneyConversion().convertMoney(currency, accountCurrency, sum);
+                    if (neededMoney > accounts.get(i).getBalance()) {
                         success = false;
-                        notEnoughMoney = account.getIban();
+                        notEnoughMoney = accounts.get(i).getIban();
                         break;
                     }
-                    amountToBeExtracted.add(specificAmount);
+                    amountToBeExtracted.add(neededMoney);
                 }
             }
-
             // The payment is valid and money are deducted from every account
             if (success) {
                 for (int i = 0; i < accounts.size(); i++) {
@@ -77,25 +80,28 @@ public final class SplitPayment implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(final User user) {
+    public ObjectNode convertJson(User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);
-        double amount = amountPerPerson * accounts.size();
         String sum = String.valueOf(amount);
         if (sum.charAt(sum.length() - 1) == '0')
-            node.put("description", "Split payment of " + amount + "0" + " " + currency);
+            node.put("description", "Split payment of " + amount + "0 " + currency);
         else
             node.put("description", "Split payment of " + amount + " " + currency);
-        node.put("splitPaymentType", "equal");
+        node.put("splitPaymentType", "custom");
         node.put("currency", currency);
-        node.put("amount", amountPerPerson);
 
-        ArrayNode involved  = mapper.createArrayNode();
-        for (Account account : accounts) {
-            involved.add(account.getIban());
+        ArrayNode amountArray = mapper.createArrayNode();
+        for (Double amount : amountList) {
+            amountArray.add(amount);
         }
-        node.set("involvedAccounts", involved);
+        node.set("amountForUsers", amountArray);
+        ArrayNode ibanArray = mapper.createArrayNode();
+        for (Account account : accounts) {
+            ibanArray.add(account.getIban());
+        }
+        node.set("involvedAccounts", ibanArray);
         if (!success && status == 1) {
             node.put("error", "Account " + notEnoughMoney + " has insufficient funds for a split "
                     + "payment.");

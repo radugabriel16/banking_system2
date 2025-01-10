@@ -423,6 +423,11 @@
     }, {
       "timestamp" : 223,
       "description" : "Interest rate of the account changed to 0.17"
+    }, {
+      "timestamp" : 224,
+      "description" : "Interest rate income",
+      "amount" : 586.6700000000001,
+      "currency" : "RON"
     } ]
   },
   "timestamp" : 226
@@ -443,12 +448,6 @@
   }, {
     "timestamp" : 208,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 227,
-    "description" : "Split payment of 1423.00 RON",
-    "currency" : "RON",
-    "amount" : 355.75,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 228
 }, {
@@ -462,12 +461,6 @@
   }, {
     "timestamp" : 196,
     "description" : "You do not have a classic account."
-  }, {
-    "timestamp" : 227,
-    "description" : "Split payment of 1423.00 RON",
-    "currency" : "RON",
-    "amount" : 355.75,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 229
 }, {
@@ -514,11 +507,10 @@
     "timestamp" : 223,
     "description" : "Interest rate of the account changed to 0.17"
   }, {
-    "timestamp" : 227,
-    "description" : "Split payment of 1423.00 RON",
-    "currency" : "RON",
-    "amount" : 355.75,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
+    "timestamp" : 224,
+    "description" : "Interest rate income",
+    "amount" : 586.6700000000001,
+    "currency" : "RON"
   } ],
   "timestamp" : 231
 }, {
@@ -538,12 +530,6 @@
   }, {
     "timestamp" : 209,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 227,
-    "description" : "Split payment of 1423.00 RON",
-    "currency" : "RON",
-    "amount" : 355.75,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 232
 }, {
@@ -566,6 +552,7 @@
   }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -585,6 +572,7 @@
   }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -634,8 +622,14 @@
     "timestamp" : 223,
     "description" : "Interest rate of the account changed to 0.17"
   }, {
+    "timestamp" : 224,
+    "description" : "Interest rate income",
+    "amount" : 586.6700000000001,
+    "currency" : "RON"
+  }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -661,6 +655,7 @@
   }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -848,8 +843,14 @@
     "timestamp" : 223,
     "description" : "Interest rate of the account changed to 0.17"
   }, {
+    "timestamp" : 224,
+    "description" : "Interest rate income",
+    "amount" : 586.6700000000001,
+    "currency" : "RON"
+  }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -998,6 +999,16 @@
     "transactions" : [ {
       "timestamp" : 253,
       "description" : "New account created"
+    }, {
+      "timestamp" : 272,
+      "description" : "Interest rate income",
+      "amount" : 1.12,
+      "currency" : "USD"
+    }, {
+      "timestamp" : 377,
+      "description" : "Interest rate income",
+      "amount" : 1.1424,
+      "currency" : "USD"
     }, {
       "timestamp" : 378,
       "description" : "Interest rate of the account changed to 0.35"
@@ -1745,8 +1756,14 @@
     "timestamp" : 223,
     "description" : "Interest rate of the account changed to 0.17"
   }, {
+    "timestamp" : 224,
+    "description" : "Interest rate income",
+    "amount" : 586.6700000000001,
+    "currency" : "RON"
+  }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]
@@ -1798,6 +1815,7 @@
   }, {
     "timestamp" : 227,
     "description" : "Split payment of 1423.00 RON",
+    "splitPaymentType" : "equal",
     "currency" : "RON",
     "amount" : 355.75,
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ]

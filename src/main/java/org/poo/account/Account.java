@@ -6,6 +6,7 @@ import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Getter
 @Setter
@@ -16,7 +17,7 @@ public class Account {
     private ArrayList<Card> cards = new ArrayList<>();
     private String alias;
     private double minBalance;
-    private ArrayList<Commerciant> commerciants = new ArrayList<>();
+    private HashMap<String, Double> payments = new HashMap<>();
 
     public Account(final double balance, final String currency, final String iban) {
         this.balance = balance;
@@ -45,28 +46,28 @@ public class Account {
      * @return the truth value
      */
 
-    public boolean commerciantExist(final String commerciantName) {
+    /*public boolean commerciantExist(final String commerciantName) {
         for (Commerciant commerciant : commerciants) {
             if (commerciant.getName().equals(commerciantName)) {
                 return true;
             }
         }
         return false;
-    }
+    }*/
 
     /**
      * It searches for a specific commerciant
      * @return the index where It was founded
      */
 
-    public int findCommerciant(final String commerciantName) {
+    /*public int findCommerciant(final String commerciantName) {
         for (int i = 0; i < commerciants.size(); i++) {
             if (this.getCommerciants().get(i).getName().equals(commerciantName)) {
                 return i;
             }
         }
         return -1;
-    }
+    }*/
 
     /**
      * It sorts the list of commerciants alphabetically

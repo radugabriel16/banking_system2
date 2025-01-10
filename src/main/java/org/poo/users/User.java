@@ -25,6 +25,7 @@ public final class User implements Visitable {
     private ArrayList<Transactions> history = new ArrayList<>();
     private int transactionsCount;
     private double spentMoney;
+    private ArrayList<SplitRequest> requests = new ArrayList<>();
 
     public User(final String firstName, final String lastName, final String email,
                 final String birthDate, final String occupation) {
@@ -70,7 +71,7 @@ public final class User implements Visitable {
      * @return the updated list of commerciants
      */
 
-    public ArrayList<Commerciant> editCommerciantsAmounts(final Account account, final int start,
+    /*public ArrayList<Commerciant> editCommerciantsAmounts(final Account account, final int start,
                                                           final int end) {
         ArrayList<Commerciant> current = new ArrayList<>(account.getCommerciants());
         ArrayList<Transactions> transactions = history;
@@ -100,7 +101,7 @@ public final class User implements Visitable {
         }
         account.sortCommerciants(current);
         return current;
-    }
+    }*/
 
     public int getAge() {
         String[] members = birthDate.split("-");

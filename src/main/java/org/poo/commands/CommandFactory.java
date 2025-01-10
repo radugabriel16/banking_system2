@@ -29,13 +29,15 @@ public class CommandFactory {
             case "report": return new Report(input, bank, converter);
             case "sendMoney": return new SendMoney(input, bank, control, converter);
             case "setAlias": return new SetAlias(input, bank);
-            case "addInterest": return new SetInterest(input, bank, converter);
+            case "addInterest": return new SetInterest(input, bank, converter, control);
             case "setMinimumBalance": return new SetMinimum(input, bank);
             case "spendingsReport": return new SpendingsReport(input, bank, converter);
             case "splitPayment": return new SplitMoney(input, bank, control);
             case "withdrawSavings": return new Withdraw(input, bank, control);
             case "upgradePlan": return new UpgradePlan(input, bank, control);
             case "cashWithdrawal": return new CashWithdraw(input, bank, control, converter);
+            case "acceptSplitPayment": return new AcceptPayment(input, bank, control);
+            case "rejectSplitPayment": return new RejectPayment(input, bank, control);
             //default: throw new IllegalArgumentException("That command is not supported");
             default: return null;
         }

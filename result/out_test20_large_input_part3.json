@@ -2353,7 +2353,10 @@
       "amount" : 6.6000000000000005,
       "commerciant" : "Microsoft"
     } ],
-    "commerciants" : [ ]
+    "commerciants" : [ {
+      "commerciant" : "Microsoft",
+      "total" : 6.6000000000000005
+    } ]
   },
   "timestamp" : 851
 }, {
@@ -3050,7 +3053,10 @@
       "amount" : 0.018571428571428572,
       "commerciant" : "Apple"
     } ],
-    "commerciants" : [ ]
+    "commerciants" : [ {
+      "commerciant" : "Apple",
+      "total" : 0.018571428571428572
+    } ]
   },
   "timestamp" : 881
 } ]

@@ -6,6 +6,7 @@ import org.poo.bank.Bank;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.ControlTransactions;
 import org.poo.transactions.SplitPayment;
+import org.poo.users.SplitRequest;
 import org.poo.users.User;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public final class SplitMoney implements Command {
 
     @Override
     public void execute() {
+        String splitType = input.getSplitPaymentType();
         List<String> accounts = input.getAccounts();
         int timeStamp = input.getTimestamp();
         String currency = input.getCurrency();
@@ -35,7 +37,18 @@ public final class SplitMoney implements Command {
         for (String account : accounts) {
             users.add(bank.findUser(account));
         }
-        SplitPayment splitPayment = new SplitPayment(timeStamp, currency, amount, bank, accounts);
-        control.multipleEdit(splitPayment, users, accounts);
+
+        SplitRequest request;
+        if (splitType.equals("custom")) {
+            request = new SplitRequest(users, accounts, input.getAmountForUsers(), amount, "custom",
+                    timeStamp, currency);
+        } else {
+            request = new SplitRequest(users, accounts, null, amount, "equal",
+                    timeStamp, currency);
+        }
+
+        for (User user : users) {
+            user.getRequests().add(request);
+        }
     }
 }
