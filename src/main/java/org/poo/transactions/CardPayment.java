@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.account.Account;
+import org.poo.account.*;
 import org.poo.bank.Bank;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
@@ -56,7 +56,7 @@ public final class CardPayment implements Transactions {
             double newAmount = amount;
             newAmount += potentialBuyer.getServicePlan().calculateCommission(newAmount, bank, currency);
 
-            if (potentialBuyer.equals(user) && account.getBalance() >= newAmount) {
+            if (account.getBalance() >= newAmount) {
                 double amountInRon = bank.getMoneyConversion().convertMoney(account.getCurrency(), "RON", amount);
                 if (amountInRon > 300 && potentialBuyer.getServicePlan().getPlan().equals("silver")) {
                     Silver silverPlan = (Silver)potentialBuyer.getServicePlan();
@@ -68,6 +68,15 @@ public final class CardPayment implements Transactions {
                 }
                 if (card.getType().equals("oneTime")) {
                     oneTimeCard = true;
+                }
+
+                if (account.getType().equals("business")) {
+                    BusinessAccount businessAccount = (BusinessAccount)account;
+
+                    Associate associate = businessAccount.getAssociate(user);
+                    if (associate != null) {
+                        associate.pay(amount, businessAccount, timeStamp);
+                    }
                 }
 
                 Commerciant com = bank.getCommerciant(commerciant);

@@ -2096,6 +2096,34 @@
   } ],
   "timestamp" : 777
 }, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 791,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 791
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 793,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 793
+}, {
+  "command" : "changeSpendingLimit",
+  "output" : {
+    "timestamp" : 794,
+    "description" : "You must be owner in order to change spending limit."
+  },
+  "timestamp" : 794
+}, {
+  "command" : "changeSpendingLimit",
+  "output" : {
+    "timestamp" : 795,
+    "description" : "You must be owner in order to change spending limit."
+  },
+  "timestamp" : 795
+}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 799,
@@ -2305,6 +2333,73 @@
     "description" : "User not found"
   },
   "timestamp" : 838
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO73POOB7862625166958832",
+    "balance" : 4711.0,
+    "currency" : "CHF",
+    "spending limit" : 122.22222222222224,
+    "deposit limit" : 211.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Arana Trillo Mamen",
+      "spent" : 0.0,
+      "deposited" : 3337.0
+    }, {
+      "username" : "Sheppard Heather",
+      "spent" : 0.0,
+      "deposited" : 923.0
+    }, {
+      "username" : "du Mendes Thibault",
+      "spent" : 0.0,
+      "deposited" : 451.0
+    } ],
+    "employees" : [ {
+      "username" : "Manuel Baez Anaya Victor",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Charette Gregoire",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Barer-Gehringer Juan",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Camiscione-Rugger Emilio",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "del Ripoll Nicodemo",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Farrell Heather",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Kaiser Hulda",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Stone Elizabeth",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Villa Dorothy",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Carey Frank",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 4711.0
+  },
+  "timestamp" : 839
 }, {
   "command" : "spendingsReport",
   "output" : {

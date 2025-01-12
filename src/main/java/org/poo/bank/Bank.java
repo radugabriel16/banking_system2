@@ -190,8 +190,9 @@ public class Bank implements Visitable {
      * The money are added in the account
      */
 
-    public void accept(final Visitor visitor, final String iban, final double amount) {
-        visitor.visit(this, iban, amount);
+    public void accept(final Visitor visitor, final Account account, final double amount, final User user,
+                       final int timeStamp) {
+        visitor.visit(this, account, amount, user, timeStamp);
     }
 
     public Commerciant getCommerciant(String name) {

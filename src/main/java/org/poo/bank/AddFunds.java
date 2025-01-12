@@ -1,6 +1,6 @@
 package org.poo.bank;
 
-import org.poo.account.Account;
+import org.poo.account.*;
 import org.poo.users.User;
 
 import java.util.ArrayList;
@@ -11,14 +11,14 @@ public class AddFunds implements Visitor {
      * It searches a specific account and add money to it
      */
 
-    public void visit(final Bank bank, final String iban, final double amount) {
-        ArrayList<User> usersToSearch = bank.getBankUsers();
-        for (User user : usersToSearch) {
-            for (Account account : user.getAccounts()) {
-                if (iban.equals(account.getIban())) {
-                    account.setBalance(account.getBalance() + amount);
-                }
+    public void visit(final Bank bank, final Account account, final double amount, final User moneyDeliver, final int timeStamp) {
+        if (account.getType().equals("business")) {
+            BusinessAccount businessAccount = (BusinessAccount) account;
+            Associate associate = businessAccount.getAssociate(moneyDeliver);
+            if (associate != null) {
+                associate.deposit(amount, businessAccount, timeStamp);
             }
         }
+        account.setBalance(account.getBalance() + amount);
     }
 }

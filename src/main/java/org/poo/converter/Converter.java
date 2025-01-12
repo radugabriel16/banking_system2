@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
+import org.poo.account.Associate;
+import org.poo.account.BusinessAccount;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
 import org.poo.transactions.CardPayment;
@@ -305,6 +307,75 @@ public final class Converter {
         ObjectNode message = mapper.createObjectNode();
         message.put("timestamp", timeStamp);
         message.put("description", "User not found");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
+
+    public void notOwnerError(final int timeStamp) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "changeSpendingLimit");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        message.put("description", "You must be owner in order to change spending limit.");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
+
+    public void alreadyAssociateError(final int timeStamp) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "addNewBusinessAssociate");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        message.put("description", "The user is already an associate of the account.");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
+
+    public void transactionsBusiness(int timeStamp, int start, int end, BusinessAccount account) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "businessReport");
+
+        ObjectNode message = mapper.createObjectNode();
+        message.put("IBAN", account.getIban());
+        message.put("balance", account.getBalance());
+        message.put("currency", account.getCurrency());
+        message.put("spending limit", account.getSpendingLimit());
+        message.put("deposit limit", account.getDepositLimit());
+        message.put("statistics type", "transaction");
+
+        ArrayNode managers = mapper.createArrayNode();
+        for (Associate associate : account.getAssociates()) {
+            if (associate.getType().equals("manager")) {
+                ObjectNode manager = mapper.createObjectNode();
+                manager.put("username", associate.getUser().getLastName() + " " + associate.getUser().getFirstName());
+                manager.put("spent", associate.getSpent(start, end));
+                manager.put("deposited", associate.getDeposited(start, end));
+                managers.add(manager);
+            }
+        }
+
+        message.set("managers", managers);
+
+        ArrayNode employees = mapper.createArrayNode();
+        for (Associate associate : account.getAssociates()) {
+            if (associate.getType().equals("employee")) {
+                ObjectNode employee = mapper.createObjectNode();
+                employee.put("username", associate.getUser().getLastName() + " " + associate.getUser().getFirstName());
+                employee.put("spent", associate.getSpent(start, end));
+                employee.put("deposited", associate.getDeposited(start, end));
+                employees.add(employee);
+            }
+        }
+
+        message.set("employees", employees);
+        message.put("total spent", account.getTotalSpent());
+        message.put("total deposited", account.getTotalDeposit());
         text.set("output", message);
         text.put("timestamp", timeStamp);
         output.add(text);

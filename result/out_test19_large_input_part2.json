@@ -1870,6 +1870,65 @@
   },
   "timestamp" : 681
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO45POOB6505529013808948",
+    "balance" : 6537.0,
+    "currency" : "USD",
+    "spending limit" : 771.0,
+    "deposit limit" : 306.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Wallace Tony",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Robson Anna",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Iyengar Harrison",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Ababe Heracleea",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Calderon Aurelio",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Beuchat Roland",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Magana Zepeda Juana",
+      "spent" : 0.0,
+      "deposited" : 6537.0
+    } ],
+    "employees" : [ {
+      "username" : "Ene Angel",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Dowerg Alwin",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Arsenio Bellucc Dott.",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Ouellet Karine",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 6537.0
+  },
+  "timestamp" : 682
+}, {
   "command" : "cashWithdrawal",
   "output" : {
     "timestamp" : 805,
@@ -1911,6 +1970,41 @@
     "description" : "Card not found"
   },
   "timestamp" : 810
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 836,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 836
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 838,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 838
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 840,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 840
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 842,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 842
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 844,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 844
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -2368,13 +2462,203 @@
     "email" : "Natalia_Zayas@zoho.mx",
     "accounts" : [ {
       "IBAN" : "RO40POOB2135483650246268",
-      "balance" : 1540.0,
+      "balance" : 946.2311111111112,
       "currency" : "MXN",
       "type" : "classic",
       "cards" : [ ]
     } ]
   } ],
   "timestamp" : 877
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO45POOB6505529013808948",
+    "balance" : 15781.239999999998,
+    "currency" : "USD",
+    "spending limit" : 840.0,
+    "deposit limit" : 306.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Wallace Tony",
+      "spent" : 0.0,
+      "deposited" : 1209.78
+    }, {
+      "username" : "Robson Anna",
+      "spent" : 0.0,
+      "deposited" : 1181.78
+    }, {
+      "username" : "Iyengar Harrison",
+      "spent" : 0.0,
+      "deposited" : 1208.78
+    }, {
+      "username" : "Ababe Heracleea",
+      "spent" : 0.0,
+      "deposited" : 1087.78
+    }, {
+      "username" : "Calderon Aurelio",
+      "spent" : 0.0,
+      "deposited" : 1087.78
+    }, {
+      "username" : "Beuchat Roland",
+      "spent" : 0.0,
+      "deposited" : 1167.78
+    }, {
+      "username" : "Magana Zepeda Juana",
+      "spent" : 0.0,
+      "deposited" : 7733.78
+    }, {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 0.0,
+      "deposited" : 1103.78
+    } ],
+    "employees" : [ {
+      "username" : "Ene Angel",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Dowerg Alwin",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Arsenio Bellucc Dott.",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Ouellet Karine",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 15781.239999999998
+  },
+  "timestamp" : 920
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO01POOB3925326637526572",
+    "balance" : 13194.679999999998,
+    "currency" : "USD",
+    "spending limit" : 16.0,
+    "deposit limit" : 111.1111111111111,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Arsenio Bellucc Dott.",
+      "spent" : 0.0,
+      "deposited" : 1189.78
+    }, {
+      "username" : "Ouellet Karine",
+      "spent" : 0.0,
+      "deposited" : 1226.78
+    }, {
+      "username" : "Iyengar Harrison",
+      "spent" : 0.0,
+      "deposited" : 1244.78
+    }, {
+      "username" : "Ababe Heracleea",
+      "spent" : 0.0,
+      "deposited" : 1195.78
+    }, {
+      "username" : "Magana Zepeda Juana",
+      "spent" : 0.0,
+      "deposited" : 7143.78
+    }, {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 0.0,
+      "deposited" : 1193.78
+    } ],
+    "employees" : [ {
+      "username" : "Ene Angel",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Dowerg Alwin",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Wallace Tony",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Robson Anna",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Calderon Aurelio",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Beuchat Roland",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 13194.679999999998
+  },
+  "timestamp" : 921
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO04POOB3492426980939341",
+    "balance" : 1189.1449714285716,
+    "currency" : "EUR",
+    "spending limit" : 958.0,
+    "deposit limit" : 100.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 854.9078285714286,
+      "deposited" : 1174.0
+    } ],
+    "employees" : [ ],
+    "total spent" : 854.9078285714286,
+    "total deposited" : 1174.0
+  },
+  "timestamp" : 922
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO66POOB1088683052483887",
+    "balance" : 1658.0,
+    "currency" : "EUR",
+    "spending limit" : 500.0,
+    "deposit limit" : 100.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 0.0,
+      "deposited" : 1109.0
+    } ],
+    "employees" : [ ],
+    "total spent" : 0.0,
+    "total deposited" : 1109.0
+  },
+  "timestamp" : 923
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO19POOB5993192794373940",
+    "balance" : 2292.0,
+    "currency" : "EUR",
+    "spending limit" : 838.0,
+    "deposit limit" : 100.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 0.0,
+      "deposited" : 2087.0
+    } ],
+    "employees" : [ ],
+    "total spent" : 0.0,
+    "total deposited" : 2087.0
+  },
+  "timestamp" : 924
+}, {
+  "command" : "addNewBusinessAssociate",
+  "output" : {
+    "timestamp" : 930,
+    "description" : "The user is already an associate of the account."
+  },
+  "timestamp" : 930
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2585,6 +2869,85 @@
     "description" : "Card not found"
   },
   "timestamp" : 963
+}, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO45POOB6505529013808948",
+    "balance" : 19306.239999999998,
+    "currency" : "USD",
+    "spending limit" : 840.0,
+    "deposit limit" : 306.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "username" : "Wallace Tony",
+      "spent" : 0.0,
+      "deposited" : 3228.7799999999997
+    }, {
+      "username" : "Robson Anna",
+      "spent" : 0.0,
+      "deposited" : 1181.78
+    }, {
+      "username" : "Iyengar Harrison",
+      "spent" : 0.0,
+      "deposited" : 1208.78
+    }, {
+      "username" : "Ababe Heracleea",
+      "spent" : 0.0,
+      "deposited" : 1087.78
+    }, {
+      "username" : "Calderon Aurelio",
+      "spent" : 0.0,
+      "deposited" : 1087.78
+    }, {
+      "username" : "Beuchat Roland",
+      "spent" : 0.0,
+      "deposited" : 1167.78
+    }, {
+      "username" : "Magana Zepeda Juana",
+      "spent" : 0.0,
+      "deposited" : 7733.78
+    }, {
+      "username" : "Sanders-Kramer Iris",
+      "spent" : 0.0,
+      "deposited" : 2609.7799999999997
+    } ],
+    "employees" : [ {
+      "username" : "Ene Angel",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Dowerg Alwin",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Arsenio Bellucc Dott.",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Ouellet Karine",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Hovel Erdogan",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Diaconescu Angel",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Raju Owen",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "username" : "Peterson Marvin",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 19306.239999999998
+  },
+  "timestamp" : 964
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -3042,7 +3405,7 @@
     "email" : "Natalia_Zayas@zoho.mx",
     "accounts" : [ {
       "IBAN" : "RO40POOB2135483650246268",
-      "balance" : 1540.0,
+      "balance" : 946.2311111111112,
       "currency" : "MXN",
       "type" : "classic",
       "cards" : [ ]
@@ -3506,7 +3869,7 @@
     "email" : "Natalia_Zayas@zoho.mx",
     "accounts" : [ {
       "IBAN" : "RO40POOB2135483650246268",
-      "balance" : 1540.0,
+      "balance" : 946.2311111111112,
       "currency" : "MXN",
       "type" : "classic",
       "cards" : [ ]
@@ -3881,10 +4244,13 @@
   "command" : "spendingsReport",
   "output" : {
     "IBAN" : "RO40POOB2135483650246268",
-    "balance" : 1540.0,
+    "balance" : 946.2311111111112,
     "currency" : "MXN",
     "transactions" : [ ],
-    "commerciants" : [ ]
+    "commerciants" : [ {
+      "commerciant" : "Burger King",
+      "total" : 595.5555555555555
+    } ]
   },
   "timestamp" : 1061
 }, {

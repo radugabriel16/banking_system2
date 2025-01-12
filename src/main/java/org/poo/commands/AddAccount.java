@@ -35,7 +35,7 @@ public final class AddAccount implements Command {
         int timeStamp = input.getTimestamp();
 
         CreateAccount createAccount = new CreateAccount(user, 0, currency, type,
-                interestRate, timeStamp);
+                interestRate, timeStamp, bank);
         control.edit(createAccount, user);
     }
 }

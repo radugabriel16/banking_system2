@@ -8,6 +8,7 @@ import org.poo.account.Account;
 import org.poo.account.AccountFactory;
 
 import org.poo.account.BusinessAccount;
+import org.poo.bank.Bank;
 import org.poo.users.User;
 import org.poo.utils.Utils;
 
@@ -21,15 +22,18 @@ public final class CreateAccount implements Transactions {
     private String type;
     private double interestRate;
     private int timeStamp;
+    private Bank bank;
 
     public CreateAccount(final User user, final double balance, final String currency,
-                         final String type, final double interestRate, final int timeStamp) {
+                         final String type, final double interestRate, final int timeStamp,
+                         final Bank bank) {
         this.user = user;
         this.balance = balance;
         this.currency = currency;
         this.type = type;
         this.interestRate = interestRate;
         this.timeStamp = timeStamp;
+        this.bank = bank;
     }
 
     @Override
@@ -50,6 +54,9 @@ public final class CreateAccount implements Transactions {
             user.getAccounts().add(account);
             BusinessAccount newAccount = (BusinessAccount) account;
             newAccount.setOwner(user);
+            double limit = bank.getMoneyConversion().convertMoney("RON", currency, 500);
+            newAccount.setDepositLimit(limit);
+            newAccount.setSpendingLimit(limit);
         }
     }
 

@@ -10,8 +10,11 @@ import java.util.ArrayList;
 @Setter
 public class BusinessAccount extends Account {
     private User owner;
-    private ArrayList<User> managers;
-    private ArrayList<User> employees;
+    private ArrayList<Associate> associates = new ArrayList<>();
+    private double spendingLimit;
+    private double depositLimit;
+    private double totalSpent;
+    private double totalDeposit;
 
     public BusinessAccount(final double balance, final String currency, final String iban) {
         super(balance, currency, iban);
@@ -20,5 +23,14 @@ public class BusinessAccount extends Account {
     @Override
     public String getType() {
         return "business";
+    }
+
+    public Associate getAssociate(User user) {
+        for (Associate associate : associates) {
+            if (associate.getUser().equals(user)) {
+                return associate;
+            }
+        }
+        return null;
     }
 }

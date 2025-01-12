@@ -991,6 +991,21 @@
   } ],
   "timestamp" : 380
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO68POOB1848616931405475",
+    "balance" : 210.0,
+    "currency" : "USD",
+    "spending limit" : 111.11111111111111,
+    "deposit limit" : 111.11111111111111,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ ],
+    "total spent" : 0.0,
+    "total deposited" : 0.0
+  },
+  "timestamp" : 381
+}, {
   "command" : "report",
   "output" : {
     "IBAN" : "RO10POOB4354933866366881",
