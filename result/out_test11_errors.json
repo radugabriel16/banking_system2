@@ -685,7 +685,7 @@
     "email" : "David_Price@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 2292.33,
+      "balance" : 2270.9014285714284,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -941,7 +941,7 @@
     "email" : "David_Price@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 2292.33,
+      "balance" : 2270.9014285714284,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1211,7 +1211,7 @@
     "email" : "David_Price@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 2292.33,
+      "balance" : 2270.9014285714284,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1474,7 +1474,7 @@
     "email" : "David_Price@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 2292.33,
+      "balance" : 2270.9014285714284,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1739,7 +1739,7 @@
     "email" : "David_Price@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 2292.33,
+      "balance" : 2270.9014285714284,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]

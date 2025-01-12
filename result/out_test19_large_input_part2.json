@@ -755,7 +755,7 @@
     "transferType" : "sent"
   }, {
     "timestamp" : 320,
-    "description" : "Split payment of 11252.1 EUR",
+    "description" : "Split payment of 11252.10 EUR",
     "splitPaymentType" : "custom",
     "currency" : "EUR",
     "amountForUsers" : [ 308.0, 783.9, 422.4, 154.0, 875.0, 79.2, 640.0, 220.0, 616.0, 1188.0, 326.0, 616.0, 316.8, 693.0, 627.2, 1078.0, 63.0, 251.2, 513.0, 1481.4 ],

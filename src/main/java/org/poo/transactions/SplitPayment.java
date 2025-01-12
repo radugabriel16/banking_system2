@@ -83,7 +83,7 @@ public final class SplitPayment implements Transactions {
         node.put("timestamp", timeStamp);
         double amount = amountPerPerson * accounts.size();
         String sum = String.valueOf(amount);
-        if (sum.charAt(sum.length() - 1) == '0')
+        if (sum.charAt(sum.length() - 1) == '0' || sum.charAt(sum.length() - 2) == '.')
             node.put("description", "Split payment of " + amount + "0" + " " + currency);
         else
             node.put("description", "Split payment of " + amount + " " + currency);
@@ -100,7 +100,7 @@ public final class SplitPayment implements Transactions {
             node.put("error", "Account " + notEnoughMoney + " has insufficient funds for a split "
                     + "payment.");
         } else if (status == 2) {
-            node.put("error", "One user rejected the payment");
+            node.put("error", "One user rejected the payment.");
         }
         return node;
     }

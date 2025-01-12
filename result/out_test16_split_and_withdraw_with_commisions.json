@@ -267,6 +267,13 @@
   } ],
   "timestamp" : 177
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 179,
+    "description" : "User not found"
+  },
+  "timestamp" : 179
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 44,
@@ -283,6 +290,13 @@
   } ],
   "timestamp" : 180
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 181,
+    "description" : "User not found"
+  },
+  "timestamp" : 181
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 115,
@@ -296,6 +310,13 @@
   } ],
   "timestamp" : 182
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 183,
+    "description" : "User not found"
+  },
+  "timestamp" : 183
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 73,
@@ -308,6 +329,13 @@
     "account" : "RO58POOB2721178218599590"
   } ],
   "timestamp" : 184
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 185,
+    "description" : "User not found"
+  },
+  "timestamp" : 185
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -325,6 +353,13 @@
   } ],
   "timestamp" : 186
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 187,
+    "description" : "User not found"
+  },
+  "timestamp" : 187
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 91,
@@ -341,6 +376,13 @@
   } ],
   "timestamp" : 188
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 189,
+    "description" : "User not found"
+  },
+  "timestamp" : 189
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 86,
@@ -353,6 +395,13 @@
     "account" : "RO76POOB4035116042454483"
   } ],
   "timestamp" : 190
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 191,
+    "description" : "User not found"
+  },
+  "timestamp" : 191
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -367,6 +416,13 @@
   } ],
   "timestamp" : 192
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 193,
+    "description" : "User not found"
+  },
+  "timestamp" : 193
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 23,
@@ -379,6 +435,13 @@
     "account" : "RO69POOB6209498372540635"
   } ],
   "timestamp" : 194
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 196,
+    "description" : "User not found"
+  },
+  "timestamp" : 196
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -393,6 +456,13 @@
   } ],
   "timestamp" : 197
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 198,
+    "description" : "User not found"
+  },
+  "timestamp" : 198
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 126,
@@ -406,16 +476,92 @@
   }, {
     "timestamp" : 138,
     "description" : "New account created"
-  }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 199
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 212,
+    "description" : "User not found"
+  },
+  "timestamp" : 212
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 213,
+    "description" : "User not found"
+  },
+  "timestamp" : 213
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 214,
+    "description" : "User not found"
+  },
+  "timestamp" : 214
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 215,
+    "description" : "User not found"
+  },
+  "timestamp" : 215
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 216,
+    "description" : "User not found"
+  },
+  "timestamp" : 216
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 217,
+    "description" : "User not found"
+  },
+  "timestamp" : 217
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 218,
+    "description" : "User not found"
+  },
+  "timestamp" : 218
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 219,
+    "description" : "User not found"
+  },
+  "timestamp" : 219
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 220,
+    "description" : "User not found"
+  },
+  "timestamp" : 220
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 221,
+    "description" : "User not found"
+  },
+  "timestamp" : 221
+}, {
+  "command" : "rejectSplitPayment",
+  "output" : {
+    "timestamp" : 222,
+    "description" : "User not found"
+  },
+  "timestamp" : 222
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 223,
+    "description" : "User not found"
+  },
+  "timestamp" : 223
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -699,14 +845,6 @@
     "timestamp" : 65,
     "description" : "New account created"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
     "timestamp" : 225,
     "description" : "Interest rate income",
     "amount" : 30.900000000000002,
@@ -728,94 +866,6 @@
     "timestamp" : 110,
     "description" : "New account created"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 227,
     "description" : "Interest rate income",
     "amount" : 24.02,
@@ -836,94 +886,6 @@
   }, {
     "timestamp" : 110,
     "description" : "New account created"
-  }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
   }, {
     "timestamp" : 227,
     "description" : "Interest rate income",
@@ -949,94 +911,6 @@
     "timestamp" : 138,
     "description" : "New account created"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 231,
     "description" : "Interest rate income",
     "amount" : 360.88,
@@ -1057,94 +931,6 @@
   }, {
     "timestamp" : 138,
     "description" : "New account created"
-  }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
   }, {
     "timestamp" : 231,
     "description" : "Interest rate income",
@@ -1170,180 +956,19 @@
     "timestamp" : 160,
     "description" : "New account created"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 235,
     "description" : "Interest rate income",
     "amount" : 473.40000000000003,
     "currency" : "USD"
   } ],
   "timestamp" : 236
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 240,
+    "description" : "User not found"
+  },
+  "timestamp" : 240
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -1359,14 +984,6 @@
     "timestamp" : 65,
     "description" : "New account created"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
     "timestamp" : 225,
     "description" : "Interest rate income",
     "amount" : 30.900000000000002,
@@ -1379,6 +996,13 @@
   } ],
   "timestamp" : 242
 }, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 245,
+    "description" : "User not found"
+  },
+  "timestamp" : 245
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 23,
@@ -1390,100 +1014,19 @@
     "cardHolder" : "Alexe_Dima@gmail.ro",
     "account" : "RO69POOB6209498372540635"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 244,
     "description" : "Upgrade plan",
     "accountIBAN" : "RO69POOB6209498372540635",
     "newPlanType" : "silver"
   } ],
   "timestamp" : 247
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 250,
+    "description" : "User not found"
+  },
+  "timestamp" : 250
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -1496,100 +1039,19 @@
     "cardHolder" : "Alix_Brunel@outlook.fr",
     "account" : "RO58POOB2721178218599590"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 249,
     "description" : "Upgrade plan",
     "accountIBAN" : "RO58POOB2721178218599590",
     "newPlanType" : "silver"
   } ],
   "timestamp" : 252
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 255,
+    "description" : "User not found"
+  },
+  "timestamp" : 255
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -1602,100 +1064,19 @@
     "cardHolder" : "Melania_Mocanu@hotmail.ro",
     "account" : "RO76POOB4035116042454483"
   }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
     "timestamp" : 254,
     "description" : "Upgrade plan",
     "accountIBAN" : "RO76POOB4035116042454483",
     "newPlanType" : "silver"
   } ],
   "timestamp" : 257
+}, {
+  "command" : "acceptSplitPayment",
+  "output" : {
+    "timestamp" : 260,
+    "description" : "User not found"
+  },
+  "timestamp" : 260
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -1707,102 +1088,6 @@
     "card" : "8207906978464446",
     "cardHolder" : "Lauren_Schultz@gmail.us",
     "account" : "RO58POOB7344468893732422"
-  }, {
-    "timestamp" : 178,
-    "description" : "Split payment of 3265.94 USD",
-    "splitPaymentType" : "custom",
-    "currency" : "USD",
-    "amountForUsers" : [ 437.1, 19.0, 84.44, 73.0, 736.5, 261.9, 706.0, 165.6, 651.0, 131.4 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO58POOB2721178218599590", "RO96POOB6738272785416988", "RO37POOB7013767509830666", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO69POOB9846198978826791", "RO79POOB3616857825600958" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 195,
-    "description" : "Split payment of 2628.00 USD",
-    "splitPaymentType" : "equal",
-    "currency" : "USD",
-    "amount" : 262.8,
-    "involvedAccounts" : [ "RO96POOB6738272785416988", "RO58POOB2721178218599590", "RO33POOB4049920806186500", "RO69POOB9846198978826791", "RO30POOB9523423715747796", "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO00POOB5687892910835215", "RO76POOB4035116042454483" ],
-    "error" : "One user rejected the payment"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2479.1 EUR",
-    "splitPaymentType" : "custom",
-    "currency" : "EUR",
-    "amountForUsers" : [ 130.2, 1180.2, 506.0, 373.8, 288.9 ],
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO76POOB4035116042454483", "RO58POOB7344468893732422" ],
-    "error" : "Account RO69POOB6209498372540635 has insufficient funds for a split payment."
   }, {
     "timestamp" : 259,
     "description" : "Upgrade plan",

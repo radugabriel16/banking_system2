@@ -392,4 +392,20 @@ public final class Converter {
         text.put("timestamp", timeStamp);
         output.add(text);
     }
+
+    public void splitPaymentError(final int timeStamp, int type) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        if (type == 1)
+            text.put("command", "acceptSplitPayment");
+        else
+            text.put("command", "rejectSplitPayment");
+
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        message.put("description", "User not found");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
 }

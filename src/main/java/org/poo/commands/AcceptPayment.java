@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.bank.Bank;
+import org.poo.converter.Converter;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.ControlTransactions;
 import org.poo.transactions.SplitCustom;
@@ -21,17 +22,24 @@ public class AcceptPayment implements Command {
     private CommandInput input;
     private Bank bank;
     private ControlTransactions control;
+    private Converter convert;
 
-    public AcceptPayment(CommandInput input, Bank bank, ControlTransactions control) {
+    public AcceptPayment(CommandInput input, Bank bank, ControlTransactions control, Converter convert) {
         this.input = input;
         this.bank = bank;
         this.control = control;
+        this.convert = convert;
     }
 
     @Override
     public void execute() {
         String email = input.getEmail();
         User user = bank.findUser(email);
+
+        if (bank.findAccount(email) != null) {
+            convert.splitPaymentError(input.getTimestamp(), 1);
+            return;
+        }
 
         if (!user.getRequests().isEmpty()) {
             user.getRequests().getFirst().decide(user, "accepted");

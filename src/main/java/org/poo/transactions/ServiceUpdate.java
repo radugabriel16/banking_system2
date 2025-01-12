@@ -75,8 +75,10 @@ public class ServiceUpdate implements Transactions {
         account.setBalance(account.getBalance() - priceToUpgrade);
         if (planType.equals("silver"))
             user.setServicePlan(ServiceFactory.createService(ServiceFactory.ServiceType.Silver));
-        else
+        else if (planType.equals("gold"))
             user.setServicePlan(ServiceFactory.createService(ServiceFactory.ServiceType.Gold));
+        else if (planType.equals("student"))
+            user.setServicePlan(ServiceFactory.createService(ServiceFactory.ServiceType.Student));
     }
 
     @Override

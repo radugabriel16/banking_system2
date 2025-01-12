@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
+import org.poo.commerciants.Discount;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ public class Account {
     private HashMap<String, Double> payments = new HashMap<>();
     private int transactionsCount;
     private double spentMoney;
+    ArrayList<Discount> discountsAvailable = new ArrayList<>();
 
     public Account(final double balance, final String currency, final String iban) {
         this.balance = balance;
@@ -95,6 +97,15 @@ public class Account {
      * This method it`s overridden in the subclasses to get the type of account
      * @return a string which represents the type
      */
+
+    public Discount findDiscount(final String discountName) {
+        for (Discount discount : getDiscountsAvailable()) {
+            if (discount.getType().equals(discountName)) {
+                return discount;
+            }
+        }
+        return null;
+    }
 
     public String getType() {
         return null;
