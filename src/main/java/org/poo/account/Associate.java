@@ -17,8 +17,8 @@ public abstract class Associate {
         this.user = user;
     }
 
-    abstract public void pay(double amount, BusinessAccount account, int timeStamp);
-    abstract public void deposit(double amount, BusinessAccount account, int timeStamp);
+    abstract public int pay(double amount, BusinessAccount account, int timeStamp);
+    abstract public int deposit(double amount, BusinessAccount account, int timeStamp);
     abstract public String getType();
     abstract public double getSpent(int start, int end);
     abstract public double getDeposited(int start, int end);

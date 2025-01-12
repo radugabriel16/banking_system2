@@ -7,8 +7,8 @@ import org.poo.users.User;
 public class SpendingThreshold implements Cashback {
     @Override
     public void pay(double amount, Commerciant comm, User user, Account account, Bank bank) {
-        user.setSpentMoney(user.getSpentMoney() + amount);
-        double money = bank.getMoneyConversion().convertMoney(account.getCurrency(), "RON", user.getSpentMoney());
+        account.setSpentMoney(account.getSpentMoney() + amount);
+        double money = bank.getMoneyConversion().convertMoney(account.getCurrency(), "RON", account.getSpentMoney());
         if (money >= 100 && money < 300) {
             if (user.getServicePlan().getPlan().equals("student") || user.getServicePlan().getPlan().equals("standard")) {
                 double cashback = 0.001 * amount;

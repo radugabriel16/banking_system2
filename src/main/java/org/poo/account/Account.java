@@ -18,6 +18,8 @@ public class Account {
     private String alias;
     private double minBalance;
     private HashMap<String, Double> payments = new HashMap<>();
+    private int transactionsCount;
+    private double spentMoney;
 
     public Account(final double balance, final String currency, final String iban) {
         this.balance = balance;

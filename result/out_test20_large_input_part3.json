@@ -1526,9 +1526,7 @@
     "account" : "RO32POOB0130532963818359"
   }, {
     "timestamp" : 554,
-    "description" : "Insufficient funds",
-    "accountIBAN" : "RO32POOB0130532963818359",
-    "newPlanType" : "silver"
+    "description" : "Insufficient funds"
   } ],
   "timestamp" : 610
 }, {

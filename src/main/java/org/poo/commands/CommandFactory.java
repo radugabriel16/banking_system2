@@ -34,7 +34,7 @@ public class CommandFactory {
             case "spendingsReport": return new SpendingsReport(input, bank, converter);
             case "splitPayment": return new SplitMoney(input, bank, control);
             case "withdrawSavings": return new Withdraw(input, bank, control);
-            case "upgradePlan": return new UpgradePlan(input, bank, control);
+            case "upgradePlan": return new UpgradePlan(input, bank, control, converter);
             case "cashWithdrawal": return new CashWithdraw(input, bank, control, converter);
             case "acceptSplitPayment": return new AcceptPayment(input, bank, control);
             case "rejectSplitPayment": return new RejectPayment(input, bank, control);

@@ -23,8 +23,6 @@ public final class User implements Visitable {
     private ServicePlan servicePlan;
     private ArrayList<Account> accounts = new ArrayList<>();
     private ArrayList<Transactions> history = new ArrayList<>();
-    private int transactionsCount;
-    private double spentMoney;
     private ArrayList<SplitRequest> requests = new ArrayList<>();
 
     public User(final String firstName, final String lastName, final String email,

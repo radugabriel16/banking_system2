@@ -75,7 +75,9 @@ public final class CardPayment implements Transactions {
 
                     Associate associate = businessAccount.getAssociate(user);
                     if (associate != null) {
-                        associate.pay(amount, businessAccount, timeStamp);
+                        int result = associate.pay(amount, businessAccount, timeStamp);
+                        if (result == 0)
+                            return;
                     }
                 }
 

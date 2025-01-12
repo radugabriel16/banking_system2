@@ -16,7 +16,10 @@ public class AddFunds implements Visitor {
             BusinessAccount businessAccount = (BusinessAccount) account;
             Associate associate = businessAccount.getAssociate(moneyDeliver);
             if (associate != null) {
-                associate.deposit(amount, businessAccount, timeStamp);
+                int result = associate.deposit(amount, businessAccount, timeStamp);
+                if (result == 0) {
+                    return;
+                }
             }
         }
         account.setBalance(account.getBalance() + amount);

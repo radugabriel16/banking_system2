@@ -8,15 +8,17 @@ public class Manager extends Associate {
     }
 
     @Override
-    public void pay(double amount, BusinessAccount account, int timeStamp) {
+    public int pay(double amount, BusinessAccount account, int timeStamp) {
         account.setTotalSpent(account.getTotalSpent() + amount);
         this.getPayments().add(new Payment(timeStamp, amount));
+        return 1;
     }
 
     @Override
-    public void deposit(double amount, BusinessAccount account, int timeStamp) {
+    public int deposit(double amount, BusinessAccount account, int timeStamp) {
         account.setTotalDeposit(account.getTotalDeposit() + amount);
         this.getDeposits().add(new Deposit(timeStamp, amount));
+        return 1;
     }
 
     @Override

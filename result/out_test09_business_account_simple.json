@@ -2,7 +2,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO58POOB2721178218599590",
-    "balance" : 9543.961,
+    "balance" : 9543.999499999998,
     "currency" : "EUR",
     "spending limit" : 339.0,
     "deposit limit" : 119.04761904761904,

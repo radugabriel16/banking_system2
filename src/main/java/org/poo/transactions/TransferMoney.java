@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
+import org.poo.account.Associate;
+import org.poo.account.BusinessAccount;
 import org.poo.bank.Bank;
 import org.poo.users.User;
 
@@ -58,6 +60,16 @@ public final class TransferMoney implements Transactions {
         newAmount += user.getServicePlan().calculateCommission(amount, bank, accountSender.getCurrency());
 
         if (accountSender.getBalance() >= newAmount) {
+            if (accountSender.getType().equals("business")) {
+                BusinessAccount businessAccount = (BusinessAccount)accountSender;
+                Associate associate = businessAccount.getAssociate(user);
+                if (associate != null) {
+                    int result = associate.pay(amount, businessAccount, timeStamp);
+                    if (result == 0) {
+                        return;
+                    }
+                }
+            }
             accountSender.setBalance(accountSender.getBalance() - newAmount);
             double receiverAmount = bank.getMoneyConversion().convertMoney(currencySender,
                     currencyReceiver, amount);

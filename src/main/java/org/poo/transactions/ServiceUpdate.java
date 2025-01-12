@@ -94,6 +94,7 @@ public class ServiceUpdate implements Transactions {
             node.put("description", "You cannot downgrade your plan.");
         } else if (messageType == 4) {
             node.put("description", "Insufficient funds");
+            return node;
         }
         node.put("accountIBAN", iban);
         node.put("newPlanType", planType);

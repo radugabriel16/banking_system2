@@ -11,17 +11,17 @@ import org.poo.users.User;
 public class NrOfTransactions implements Cashback {
     @Override
     public void pay(double amount, Commerciant comm, User user, Account account, Bank bank) {
-        if (user.getTransactionsCount() == 2 && comm.getType().equals("Food")) {
+        if (account.getTransactionsCount() == 2 && comm.getType().equals("Food")) {
             double cashback = 0.02 * amount;
             account.setBalance(account.getBalance() + cashback);
-        } else if (user.getTransactionsCount() == 5 && comm.getType().equals("Clothes")) {
+        } else if (account.getTransactionsCount() == 5 && comm.getType().equals("Clothes")) {
             double cashback = 0.05 * amount;
             account.setBalance(account.getBalance() + cashback);
-        } else if (user.getTransactionsCount() == 10 && comm.getType().equals("Tech")) {
+        } else if (account.getTransactionsCount() == 10 && comm.getType().equals("Tech")) {
             double cashback = 0.1 * amount;
             account.setBalance(account.getBalance() + cashback);
         }
         comm.setAmountReceived(comm.getAmountReceived() + amount);
-        user.setTransactionsCount(user.getTransactionsCount() + 1);
+        account.setTransactionsCount(account.getTransactionsCount() + 1);
     }
 }

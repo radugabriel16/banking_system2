@@ -2,7 +2,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO69POOB6209498372540635",
-    "balance" : 737.0,
+    "balance" : 0.0,
     "currency" : "RON",
     "spending limit" : 500.0,
     "deposit limit" : 135.0,
@@ -47,7 +47,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO69POOB6209498372540635",
-    "balance" : 3365.063,
+    "balance" : 2628.063,
     "currency" : "RON",
     "spending limit" : 500.0,
     "deposit limit" : 135.0,
@@ -78,7 +78,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO69POOB6209498372540635",
-    "balance" : 3912.7005500000005,
+    "balance" : 4500.859825000001,
     "currency" : "RON",
     "spending limit" : 500.0,
     "deposit limit" : 135.0,

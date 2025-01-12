@@ -380,4 +380,16 @@ public final class Converter {
         text.put("timestamp", timeStamp);
         output.add(text);
     }
+
+    public void notFoundAccount(int timeStamp) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "upgradePlan");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("timestamp", timeStamp);
+        message.put("description", "Account not found");
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
 }

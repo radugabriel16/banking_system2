@@ -14,19 +14,23 @@ public class Employee extends Associate {
     }
 
     @Override
-    public void pay(double amount, BusinessAccount account, int timeStamp) {
+    public int pay(double amount, BusinessAccount account, int timeStamp) {
         if (amount <= account.getSpendingLimit()) {
             account.setTotalSpent(account.getTotalSpent() + amount);
             this.getPayments().add(new Payment(timeStamp, amount));
+            return 1;
         }
+        return 0;
     }
 
     @Override
-    public void deposit(double amount, BusinessAccount account, int timeStamp) {
+    public int deposit(double amount, BusinessAccount account, int timeStamp) {
         if (amount <= account.getDepositLimit()) {
             account.setTotalDeposit(account.getTotalDeposit() + amount);
             this.getDeposits().add(new Deposit(timeStamp, amount));
+            return 1;
         }
+        return 0;
     }
 
     @Override
