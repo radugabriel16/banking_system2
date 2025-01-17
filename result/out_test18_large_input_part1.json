@@ -789,6 +789,18 @@
   },
   "timestamp" : 446
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO53POOB7122855990652257",
+    "balance" : 899.0,
+    "currency" : "EUR",
+    "spending limit" : 357.0,
+    "deposit limit" : 100.0,
+    "statistics type" : "commerciant",
+    "commerciants" : [ ]
+  },
+  "timestamp" : 447
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Simion",
@@ -3551,7 +3563,7 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 116.9599726045455,
+      "balance" : 116.95283431883115,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
@@ -3864,6 +3876,18 @@
   } ],
   "timestamp" : 600
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO75POOB8279679254660818",
+    "balance" : 17247.0,
+    "currency" : "NZD",
+    "spending limit" : 177.7777777777778,
+    "deposit limit" : 177.7777777777778,
+    "statistics type" : "commerciant",
+    "commerciants" : [ ]
+  },
+  "timestamp" : 601
+}, {
   "command" : "deleteAccount",
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
@@ -3935,7 +3959,7 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 116.9599726045455,
+      "balance" : 116.95283431883115,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
@@ -4097,7 +4121,7 @@
     "email" : "Lisandro_del_Andres@hushmail.es",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1381.1010400000002,
+      "balance" : 1381.0976400000002,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
@@ -4296,7 +4320,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO53POOB7122855990652257",
-    "balance" : 116.9599726045455,
+    "balance" : 116.95283431883115,
     "currency" : "EUR",
     "spending limit" : 357.0,
     "deposit limit" : 100.0,

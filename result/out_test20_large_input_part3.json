@@ -1995,7 +1995,7 @@
       } ]
     }, {
       "IBAN" : "RO19POOB5993192794373940",
-      "balance" : 522.896,
+      "balance" : 523.0,
       "currency" : "MXN",
       "type" : "savings",
       "cards" : [ {
@@ -2136,13 +2136,6 @@
   },
   "timestamp" : 801
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 802,
-    "description" : "User not found"
-  },
-  "timestamp" : 802
-}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 803,
@@ -2156,13 +2149,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 805
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 806,
-    "description" : "User not found"
-  },
-  "timestamp" : 806
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2178,13 +2164,6 @@
   },
   "timestamp" : 809
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 810,
-    "description" : "User not found"
-  },
-  "timestamp" : 810
-}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 811,
@@ -2198,13 +2177,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 813
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 814,
-    "description" : "User not found"
-  },
-  "timestamp" : 814
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2220,13 +2192,6 @@
   },
   "timestamp" : 817
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 818,
-    "description" : "User not found"
-  },
-  "timestamp" : 818
-}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 819,
@@ -2240,13 +2205,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 821
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 822,
-    "description" : "User not found"
-  },
-  "timestamp" : 822
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2262,13 +2220,6 @@
   },
   "timestamp" : 825
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 826,
-    "description" : "User not found"
-  },
-  "timestamp" : 826
-}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 827,
@@ -2282,13 +2233,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 829
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 830,
-    "description" : "User not found"
-  },
-  "timestamp" : 830
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2304,13 +2248,6 @@
   },
   "timestamp" : 833
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 834,
-    "description" : "User not found"
-  },
-  "timestamp" : 834
-}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 835,
@@ -2324,13 +2261,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 837
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 838,
-    "description" : "User not found"
-  },
-  "timestamp" : 838
 }, {
   "command" : "businessReport",
   "output" : {
@@ -2399,6 +2329,18 @@
   },
   "timestamp" : 839
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO73POOB7862625166958832",
+    "balance" : 4711.0,
+    "currency" : "CHF",
+    "spending limit" : 122.22222222222224,
+    "deposit limit" : 211.0,
+    "statistics type" : "commerciant",
+    "commerciants" : [ ]
+  },
+  "timestamp" : 840
+}, {
   "command" : "spendingsReport",
   "output" : {
     "IBAN" : "RO69POOB9846198978826791",
@@ -2460,27 +2402,6 @@
   },
   "timestamp" : 854
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 856,
-    "description" : "User not found"
-  },
-  "timestamp" : 856
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 857,
-    "description" : "User not found"
-  },
-  "timestamp" : 857
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 859,
-    "description" : "User not found"
-  },
-  "timestamp" : 859
-}, {
   "command" : "cashWithdrawal",
   "output" : {
     "timestamp" : 860,
@@ -2494,13 +2415,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 861
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 862,
-    "description" : "User not found"
-  },
-  "timestamp" : 862
 }, {
   "command" : "cashWithdrawal",
   "output" : {
@@ -2537,13 +2451,6 @@
   },
   "timestamp" : 871
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 873,
-    "description" : "User not found"
-  },
-  "timestamp" : 873
-}, {
   "command" : "cashWithdrawal",
   "output" : {
     "timestamp" : 874,
@@ -2557,13 +2464,6 @@
     "description" : "Card not found"
   },
   "timestamp" : 876
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 877,
-    "description" : "User not found"
-  },
-  "timestamp" : 877
 }, {
   "command" : "cashWithdrawal",
   "output" : {
@@ -2579,7 +2479,7 @@
     "email" : "Jennifer_Gould@mail.com.ca",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 6242.981428571428,
+      "balance" : 3301.2614285714285,
       "currency" : "CAD",
       "type" : "classic",
       "cards" : [ {
@@ -3036,7 +2936,7 @@
       } ]
     }, {
       "IBAN" : "RO19POOB5993192794373940",
-      "balance" : 522.896,
+      "balance" : 523.0,
       "currency" : "MXN",
       "type" : "savings",
       "cards" : [ {
@@ -3124,7 +3024,7 @@
     "email" : "Thibault_du_Mendes@zoho.fr",
     "accounts" : [ {
       "IBAN" : "RO01POOB9893132718323396",
-      "balance" : 1403.0,
+      "balance" : 120.94199999999987,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ {
@@ -3138,7 +3038,7 @@
   "command" : "spendingsReport",
   "output" : {
     "IBAN" : "RO58POOB7344468893732422",
-    "balance" : 6242.981428571428,
+    "balance" : 3301.2614285714285,
     "currency" : "CAD",
     "transactions" : [ {
       "timestamp" : 620,

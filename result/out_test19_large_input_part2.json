@@ -2174,7 +2174,7 @@
       "cards" : [ ]
     }, {
       "IBAN" : "RO97POOB5006417983475785",
-      "balance" : 2453.307108,
+      "balance" : 2456.9579999999996,
       "currency" : "INR",
       "type" : "savings",
       "cards" : [ ]
@@ -2653,6 +2653,18 @@
   },
   "timestamp" : 924
 }, {
+  "command" : "businessReport",
+  "output" : {
+    "IBAN" : "RO19POOB5993192794373940",
+    "balance" : 2292.0,
+    "currency" : "EUR",
+    "spending limit" : 838.0,
+    "deposit limit" : 100.0,
+    "statistics type" : "commerciant",
+    "commerciants" : [ ]
+  },
+  "timestamp" : 925
+}, {
   "command" : "addNewBusinessAssociate",
   "output" : {
     "timestamp" : 930,
@@ -3117,7 +3129,7 @@
       "cards" : [ ]
     }, {
       "IBAN" : "RO97POOB5006417983475785",
-      "balance" : 2453.307108,
+      "balance" : 2456.9579999999996,
       "currency" : "INR",
       "type" : "savings",
       "cards" : [ ]
@@ -3581,7 +3593,7 @@
       "cards" : [ ]
     }, {
       "IBAN" : "RO97POOB5006417983475785",
-      "balance" : 2453.307108,
+      "balance" : 2456.9579999999996,
       "currency" : "INR",
       "type" : "savings",
       "cards" : [ ]

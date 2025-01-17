@@ -70,18 +70,21 @@ public final class CardPayment implements Transactions {
                     oneTimeCard = true;
                 }
 
+                Commerciant com = bank.getCommerciant(commerciant);
+
                 if (account.getType().equals("business")) {
                     BusinessAccount businessAccount = (BusinessAccount)account;
 
                     Associate associate = businessAccount.getAssociate(user);
                     if (associate != null) {
-                        int result = associate.pay(amount, businessAccount, timeStamp);
+                        int result = associate.pay(amount, businessAccount, timeStamp, com);
                         if (result == 0)
                             return;
+                        else if (!businessAccount.getCommerciants().contains(com))
+                            businessAccount.getCommerciants().add(com);
                     }
                 }
 
-                Commerciant com = bank.getCommerciant(commerciant);
                 com.getCashback().pay(amount, com, user, account, bank);
 
                 if (account.getPayments().get(commerciant) != null) {

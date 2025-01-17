@@ -91,9 +91,11 @@ public class ServiceUpdate implements Transactions {
         } else if (messageType == 1) {
             node.put("description", "Account not found");
         } else if (messageType == 2) {
-            node.put("description", "The user already has the " + planType + "plan.");
+            node.put("description", "The user already has the " + planType + " plan.");
+            return node;
         } else if (messageType == 3) {
             node.put("description", "You cannot downgrade your plan.");
+            return node;
         } else if (messageType == 4) {
             node.put("description", "Insufficient funds");
             return node;

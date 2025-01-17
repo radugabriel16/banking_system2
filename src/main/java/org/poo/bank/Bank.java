@@ -3,6 +3,8 @@ package org.poo.bank;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
+import org.poo.account.AccountFactory;
+import org.poo.account.CommerciantAccount;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
 import org.poo.exchange_rate.MoneyConversion;
@@ -29,8 +31,11 @@ public class Bank implements Visitable {
         }
         this.moneyConversion = moneyConversion;
         for (CommerciantInput commerciant : com) {
+            String cashbackStrategy = commerciant.getCashbackStrategy();
+            Account account = AccountFactory.createAccount(AccountFactory.AccountType.commerciant, 0, "RON",
+                    commerciant.getAccount(), this);
             Commerciant newCom = new Commerciant(commerciant.getCommerciant(), commerciant.getId(),
-                    commerciant.getAccount(), commerciant.getType(), commerciant.getCashbackStrategy());
+                    account, commerciant.getType(), cashbackStrategy);
             commerciants.add(newCom);
         }
     }
@@ -200,6 +205,29 @@ public class Bank implements Visitable {
             if (commerciant != null) {
                 if (commerciant.getName().equals(name)) {
                     return commerciant;
+                }
+            }
+        }
+        return null;
+    }
+
+    public boolean commerciantAccount(String iban) {
+        for (Commerciant commerciant : commerciants) {
+            if (commerciant != null) {
+                CommerciantAccount account = (CommerciantAccount) commerciant.getAccount();
+                if (account.getIban().equals(iban)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public Account getCommerciantAccount(String iban) {
+        for (Commerciant commerciant : commerciants) {
+            if (commerciant != null) {
+                if (commerciant.getAccount().getIban().equals(iban)) {
+                    return commerciant.getAccount();
                 }
             }
         }

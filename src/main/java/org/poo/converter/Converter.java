@@ -5,18 +5,18 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.account.Account;
-import org.poo.account.Associate;
-import org.poo.account.BusinessAccount;
+import org.poo.account.*;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
 import org.poo.transactions.CardPayment;
 import org.poo.transactions.Transactions;
 import org.poo.users.User;
 
+import java.lang.reflect.Array;
 import java.security.Key;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @Getter
 @Setter
@@ -376,6 +376,55 @@ public final class Converter {
         message.set("employees", employees);
         message.put("total spent", account.getTotalSpent());
         message.put("total deposited", account.getTotalDeposit());
+        text.set("output", message);
+        text.put("timestamp", timeStamp);
+        output.add(text);
+    }
+
+    public void commerciantBusiness(int timeStamp, int start, int end, BusinessAccount account) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode text = mapper.createObjectNode();
+        text.put("command", "businessReport");
+        ObjectNode message = mapper.createObjectNode();
+        message.put("IBAN", account.getIban());
+        message.put("balance", account.getBalance());
+        message.put("currency", account.getCurrency());
+        message.put("spending limit", account.getSpendingLimit());
+        message.put("deposit limit", account.getDepositLimit());
+        message.put("statistics type", "commerciant");
+
+        account.getCommerciants().sort(new SortCommerciants());
+
+        ArrayNode comm = mapper.createArrayNode();
+        for (Commerciant commerciant : account.getCommerciants()) {
+            ObjectNode c = mapper.createObjectNode();
+            c.put("commerciant", commerciant.getName());
+            c.put("totalReceived", commerciant.getAmountReceived());
+
+            List<Manager> managers = account.getManagersInvolved(commerciant);
+            managers.sort(new SortManagers());
+
+            List<Employee> employees = account.getEmployeesInvolved(commerciant);
+            employees.sort(new SortEmployees());
+
+            ArrayNode m = mapper.createArrayNode();
+            for (Manager manager : managers) {
+                String name = manager.getUser().getLastName() + " " + manager.getUser().getFirstName();
+                m.add(name);
+            }
+
+            c.set("managers", m);
+
+            ArrayNode e = mapper.createArrayNode();
+            for (Employee employee : employees) {
+                String name = employee.getUser().getLastName() + " " + employee.getUser().getFirstName();
+                e.add(name);
+            }
+
+            c.set("employees", e);
+            comm.add(c);
+        }
+        message.set("commerciants", comm);
         text.set("output", message);
         text.put("timestamp", timeStamp);
         output.add(text);

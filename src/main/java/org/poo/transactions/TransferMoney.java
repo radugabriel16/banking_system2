@@ -7,7 +7,10 @@ import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.account.Associate;
 import org.poo.account.BusinessAccount;
+import org.poo.account.CommerciantAccount;
 import org.poo.bank.Bank;
+import org.poo.commerciants.Cashback;
+import org.poo.commerciants.Commerciant;
 import org.poo.users.User;
 
 @Getter
@@ -64,7 +67,7 @@ public final class TransferMoney implements Transactions {
                 BusinessAccount businessAccount = (BusinessAccount)accountSender;
                 Associate associate = businessAccount.getAssociate(user);
                 if (associate != null) {
-                    int result = associate.pay(amount, businessAccount, timeStamp);
+                    int result = associate.pay(amount, businessAccount, timeStamp, null);
                     if (result == 0) {
                         return;
                     }

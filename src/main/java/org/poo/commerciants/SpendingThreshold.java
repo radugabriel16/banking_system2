@@ -20,6 +20,8 @@ public class SpendingThreshold implements Cashback {
                 double cashback = 0.005 * amount;
                 account.setBalance(account.getBalance() + cashback);
             }
+            double extract = bank.getMoneyConversion().convertMoney("RON", account.getCurrency(), 100);
+            account.setSpentMoney(account.getSpentMoney() - extract);
         } else if (money >= 300 && money < 500) {
             if (user.getServicePlan().getPlan().equals("student") || user.getServicePlan().getPlan().equals("standard")) {
                 double cashback = 0.002 * amount;
@@ -31,6 +33,8 @@ public class SpendingThreshold implements Cashback {
                 double cashback = 0.0055 * amount;
                 account.setBalance(account.getBalance() + cashback);
             }
+            double extract = bank.getMoneyConversion().convertMoney("RON", account.getCurrency(), 300);
+            account.setSpentMoney(account.getSpentMoney() - extract);
         } else if (money >= 500) {
             if (user.getServicePlan().getPlan().equals("student") || user.getServicePlan().getPlan().equals("standard")) {
                 double cashback = 0.0025 * amount;
@@ -42,6 +46,8 @@ public class SpendingThreshold implements Cashback {
                 double cashback = 0.007 * amount;
                 account.setBalance(account.getBalance() + cashback);
             }
+            double extract = bank.getMoneyConversion().convertMoney("RON", account.getCurrency(), 500);
+            account.setSpentMoney(account.getSpentMoney() - extract);
         }
         comm.setAmountReceived(comm.getAmountReceived() + amount);
     }

@@ -2,6 +2,7 @@ package org.poo.account;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.poo.commerciants.Commerciant;
 import org.poo.users.User;
 
 import java.util.ArrayList;
@@ -14,10 +15,11 @@ public class Employee extends Associate {
     }
 
     @Override
-    public int pay(double amount, BusinessAccount account, int timeStamp) {
+    public int pay(double amount, BusinessAccount account, int timeStamp, Commerciant comm) {
         if (amount <= account.getSpendingLimit()) {
             account.setTotalSpent(account.getTotalSpent() + amount);
             this.getPayments().add(new Payment(timeStamp, amount));
+            this.getPaymentsToCommerciant().add(new CommPayment(timeStamp, amount, comm));
             return 1;
         }
         return 0;

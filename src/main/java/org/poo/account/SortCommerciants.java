@@ -4,7 +4,7 @@ import org.poo.commerciants.Commerciant;
 
 import java.util.Comparator;
 
-public final class SortNames implements Comparator<Commerciant> {
+public final class SortCommerciants implements Comparator<Commerciant> {
 
     /**
      * This is used to sort alphabetically a list of commerciants

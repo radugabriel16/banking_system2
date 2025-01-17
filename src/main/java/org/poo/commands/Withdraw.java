@@ -31,7 +31,8 @@ public class Withdraw implements Command {
         int timeStamp = input.getTimestamp();
 
         ExtractMoney extract = new ExtractMoney(timeStamp, currency, amount, iban, bank);
-        if (bank.findUser(iban) != null)
-            control.edit(extract, bank.findUser(iban));
+        control.edit(extract, bank.findUser(iban));
+        if (extract.getDoubleMessage() == 1)
+            bank.findUser(iban).getHistory().add(extract);
     }
 }

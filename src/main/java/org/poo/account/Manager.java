@@ -1,5 +1,6 @@
 package org.poo.account;
 
+import org.poo.commerciants.Commerciant;
 import org.poo.users.User;
 
 public class Manager extends Associate {
@@ -8,9 +9,10 @@ public class Manager extends Associate {
     }
 
     @Override
-    public int pay(double amount, BusinessAccount account, int timeStamp) {
+    public int pay(double amount, BusinessAccount account, int timeStamp, Commerciant comm) {
         account.setTotalSpent(account.getTotalSpent() + amount);
         this.getPayments().add(new Payment(timeStamp, amount));
+        this.getPaymentsToCommerciant().add(new CommPayment(timeStamp, amount, comm));
         return 1;
     }
 

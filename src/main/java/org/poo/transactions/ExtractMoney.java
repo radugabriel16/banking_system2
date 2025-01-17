@@ -18,8 +18,10 @@ public class ExtractMoney implements Transactions {
     private String currency;
     private double amount;
     private String iban;
+    private String classicIban;
     private int messageType;
     private Bank bank;
+    private int doubleMessage;
 
     public ExtractMoney(int timeStamp, String currency, double amount, String iban, Bank bank) {
         this.timeStamp = timeStamp;
@@ -62,15 +64,15 @@ public class ExtractMoney implements Transactions {
             return;
         }
 
-        double newAmount = amount;
-        newAmount += user.getServicePlan().calculateCommission(amount, bank, currency);
-        if (newAmount > account.getBalance()) {
+        if (amount > account.getBalance()) {
             messageType = 5;
             return;
         }
 
-        account.setBalance(account.getBalance() - newAmount);
+        doubleMessage = 1;
+        account.setBalance(account.getBalance() - amount);
         firstClassicAccount.setBalance(firstClassicAccount.getBalance() + amount);
+        classicIban = firstClassicAccount.getIban();
     }
 
     @Override
@@ -88,8 +90,12 @@ public class ExtractMoney implements Transactions {
             node.put("description", "You do not have a classic account.");
         else if (messageType == 5)
             node.put("description", "Insufficient funds");
-        else
+        else {
             node.put("description", "Savings withdrawal");
+            node.put("savingsAccountIBAN", iban);
+            node.put("classicAccountIBAN", classicIban);
+            node.put("amount", amount);
+        }
         return node;
     }
 

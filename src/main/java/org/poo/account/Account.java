@@ -77,11 +77,11 @@ public class Account {
      * It sorts the list of commerciants alphabetically
      */
 
-    public void sortCommerciants(final ArrayList<Commerciant> list) {
+    /*public void sortCommerciants(final ArrayList<Commerciant> list) {
         if (list.size() > 1) {
             list.sort(new SortNames());
         }
-    }
+    }*/
 
     /**
      * Used to freeze the cards of an account which has problems with money

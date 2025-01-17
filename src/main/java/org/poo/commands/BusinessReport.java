@@ -34,6 +34,8 @@ public class BusinessReport implements Command {
         BusinessAccount account = (BusinessAccount) bank.findAccount(iban);
         if (type.equals("transaction")) {
             convert.transactionsBusiness(timeStamp, start, end, account);
+        } else {
+            convert.commerciantBusiness(timeStamp, start, end, account);
         }
     }
 }
