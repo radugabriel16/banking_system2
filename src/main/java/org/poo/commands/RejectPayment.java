@@ -11,18 +11,18 @@ import org.poo.transactions.SplitPayment;
 import org.poo.users.SplitRequest;
 import org.poo.users.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-public class RejectPayment implements Command {
+public final class RejectPayment implements Command {
     private CommandInput input;
     private Bank bank;
     private ControlTransactions control;
     private Converter convert;
 
-    public RejectPayment(CommandInput input, Bank bank, ControlTransactions control, Converter convert) {
+    public RejectPayment(final CommandInput input, final Bank bank,
+                         final ControlTransactions control, final Converter convert) {
         this.input = input;
         this.bank = bank;
         this.control = control;
@@ -52,12 +52,15 @@ public class RejectPayment implements Command {
                 List<String> accounts = request.getAccounts();
 
                 if (type.equals("equal")) {
-                    SplitPayment splitPayment = new SplitPayment(timeStamp, currency, amount, bank, accounts, status);
-                    control.multipleEdit(splitPayment, request.getInvolved(), accounts, 1, timeStamp);
+                    SplitPayment splitPayment = new SplitPayment(timeStamp, currency, amount, bank,
+                            accounts, status);
+                    control.multipleEdit(splitPayment, request.getInvolved(), accounts, 1,
+                            timeStamp);
                 } else {
-                    SplitCustom splitCustom = new SplitCustom(timeStamp, currency, amount, request.getAmountList(),
-                            bank, accounts, status);
-                    control.multipleEdit(splitCustom, request.getInvolved(), accounts, 2, timeStamp);
+                    SplitCustom splitCustom = new SplitCustom(timeStamp, currency, amount,
+                            request.getAmountList(), bank, accounts, status);
+                    control.multipleEdit(splitCustom, request.getInvolved(), accounts, 2,
+                            timeStamp);
                 }
             }
             user.getRequests().removeFirst();

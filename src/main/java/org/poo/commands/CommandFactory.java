@@ -38,12 +38,12 @@ public class CommandFactory {
             case "cashWithdrawal": return new CashWithdraw(input, bank, control, converter);
             case "acceptSplitPayment": return new AcceptPayment(input, bank, control, converter);
             case "rejectSplitPayment": return new RejectPayment(input, bank, control, converter);
-            case "addNewBusinessAssociate": return new AddNewBusinessAssociate(input, bank, converter);
+            case "addNewBusinessAssociate": return new AddNewBusinessAssociate(input, bank,
+                    converter);
             case "changeSpendingLimit": return new ChangeSpendingLimit(input, bank, converter);
             case "changeDepositLimit": return new ChangeDepositLimit(input, bank, converter);
             case "businessReport": return new BusinessReport(converter, input, bank);
-            //default: throw new IllegalArgumentException("That command is not supported");
-            default: return null;
+            default: throw new IllegalArgumentException("That command is not supported");
         }
     }
 }

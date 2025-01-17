@@ -8,7 +8,6 @@ import org.poo.account.CommerciantAccount;
 import org.poo.card.Card;
 import org.poo.commerciants.Commerciant;
 import org.poo.exchange_rate.MoneyConversion;
-import org.poo.fileio.CommandInput;
 import org.poo.fileio.CommerciantInput;
 import org.poo.fileio.UserInput;
 import org.poo.users.User;
@@ -32,7 +31,8 @@ public class Bank implements Visitable {
         this.moneyConversion = moneyConversion;
         for (CommerciantInput commerciant : com) {
             String cashbackStrategy = commerciant.getCashbackStrategy();
-            Account account = AccountFactory.createAccount(AccountFactory.AccountType.commerciant, 0, "RON",
+            Account account = AccountFactory.createAccount(AccountFactory.AccountType.commerciant,
+                    0, "RON",
                     commerciant.getAccount(), this);
             Commerciant newCom = new Commerciant(commerciant.getCommerciant(), commerciant.getId(),
                     account, commerciant.getType(), cashbackStrategy);
@@ -174,8 +174,8 @@ public class Bank implements Visitable {
     }
 
     /**
-     * After a payment with the one time card, the method changes the used card with the new created
-     * one
+     * After a payment with the one time card, the method changes the used card with the new
+     * created one
      * @param previous the used card for payment
      * @param newCard the new card
      * @param cards the list of card
@@ -195,12 +195,16 @@ public class Bank implements Visitable {
      * The money are added in the account
      */
 
-    public void accept(final Visitor visitor, final Account account, final double amount, final User user,
-                       final int timeStamp) {
+    public void accept(final Visitor visitor, final Account account, final double amount,
+                       final User user, final int timeStamp) {
         visitor.visit(this, account, amount, user, timeStamp);
     }
 
-    public Commerciant getCommerciant(String name) {
+    /**
+     * @return the commerciant based on a given name
+     */
+
+    public Commerciant getCommerciant(final String name) {
         for (Commerciant commerciant : commerciants) {
             if (commerciant != null) {
                 if (commerciant.getName().equals(name)) {
@@ -211,7 +215,11 @@ public class Bank implements Visitable {
         return null;
     }
 
-    public boolean commerciantAccount(String iban) {
+    /**
+     * @return if an account is a commercial one
+     */
+
+    public boolean commerciantAccount(final String iban) {
         for (Commerciant commerciant : commerciants) {
             if (commerciant != null) {
                 CommerciantAccount account = (CommerciantAccount) commerciant.getAccount();
@@ -223,7 +231,11 @@ public class Bank implements Visitable {
         return false;
     }
 
-    public Account getCommerciantAccount(String iban) {
+    /**
+     * @return an account based on given IBAN
+     */
+
+    public Account getCommerciantAccount(final String iban) {
         for (Commerciant commerciant : commerciants) {
             if (commerciant != null) {
                 if (commerciant.getAccount().getIban().equals(iban)) {

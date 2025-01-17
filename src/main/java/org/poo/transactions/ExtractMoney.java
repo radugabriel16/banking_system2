@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
-import org.poo.account.SavingsAccount;
 import org.poo.bank.Bank;
 import org.poo.users.User;
 
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-public class ExtractMoney implements Transactions {
+public final class ExtractMoney implements Transactions {
     private int timeStamp;
     private String currency;
     private double amount;
@@ -22,8 +21,15 @@ public class ExtractMoney implements Transactions {
     private int messageType;
     private Bank bank;
     private int doubleMessage;
+    private static final int MESSAGE1 = 1;
+    private static final int MESSAGE2 = 2;
+    private static final int MESSAGE3 = 3;
+    private static final int MESSAGE4 = 4;
+    private static final int MESSAGE5 = 5;
+    private static final int MINIMUM_AGE = 21;
 
-    public ExtractMoney(int timeStamp, String currency, double amount, String iban, Bank bank) {
+    public ExtractMoney(final int timeStamp, final String currency, final double amount,
+                        final String iban, final Bank bank) {
         this.timeStamp = timeStamp;
         this.currency = currency;
         this.amount = amount;
@@ -35,16 +41,16 @@ public class ExtractMoney implements Transactions {
     public void execute() {
         Account account = bank.findAccount(iban);
         if (account == null) {
-            messageType = 1;
+            messageType = MESSAGE1;
             return;
         } else if (!account.getType().equals("savings")) {
-            messageType = 2;
+            messageType = MESSAGE2;
             return;
         }
 
         User user = bank.findUser(iban);
-        if (user.getAge() < 21) {
-            messageType = 3;
+        if (user.getAge() < MINIMUM_AGE) {
+            messageType = MESSAGE3;
             return;
         }
 
@@ -60,12 +66,12 @@ public class ExtractMoney implements Transactions {
             }
         }
         if (!existClassic || firstClassicAccount == null) {
-            messageType = 4;
+            messageType = MESSAGE4;
             return;
         }
 
         if (amount > account.getBalance()) {
-            messageType = 5;
+            messageType = MESSAGE5;
             return;
         }
 
@@ -76,21 +82,21 @@ public class ExtractMoney implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(User user) {
+    public ObjectNode convertJson(final User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);
-        if (messageType == 1)
+        if (messageType == MESSAGE1) {
             node.put("description", "Account not found");
-        else if (messageType == 2)
+        } else if (messageType == MESSAGE2) {
             node.put("description", "Account is not of type savings.");
-        else if (messageType == 3)
+        } else if (messageType == MESSAGE3) {
             node.put("description", "You don't have the minimum age required.");
-        else if (messageType == 4)
+        } else if (messageType == MESSAGE4) {
             node.put("description", "You do not have a classic account.");
-        else if (messageType == 5)
+        } else if (messageType == MESSAGE5) {
             node.put("description", "Insufficient funds");
-        else {
+        } else {
             node.put("description", "Savings withdrawal");
             node.put("savingsAccountIBAN", iban);
             node.put("classicAccountIBAN", classicIban);

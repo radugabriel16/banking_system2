@@ -17,7 +17,8 @@ public final class SetInterest implements Command {
     private Converter convert;
     private ControlTransactions control;
 
-    public SetInterest(final CommandInput input, final Bank bank, final Converter convert, final ControlTransactions control) {
+    public SetInterest(final CommandInput input, final Bank bank, final Converter convert,
+                       final ControlTransactions control) {
         this.input = input;
         this.bank = bank;
         this.convert = convert;

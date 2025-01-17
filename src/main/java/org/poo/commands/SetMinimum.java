@@ -22,8 +22,9 @@ public final class SetMinimum implements Command {
         double minBalance = input.getMinBalance();
         String iban = input.getAccount();
         Account account = bank.findAccount(iban);
-        if (account != null)
+        if (account != null) {
             account.setMinBalance(minBalance);
+        }
     }
 }
 

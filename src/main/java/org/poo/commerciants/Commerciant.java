@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
 
-import java.util.Calendar;
-
 @Getter
 @Setter
 public class Commerciant {
@@ -22,9 +20,10 @@ public class Commerciant {
         this.id = id;
         this.account = account;
         this.type = type;
-        if (cashbackType.equals("nrOfTransactions"))
+        if (cashbackType.equals("nrOfTransactions")) {
             cashback = CashbackFactory.createCashback(CashbackFactory.CashbackType.NrOfTransactions);
-        else
+        } else {
             cashback = CashbackFactory.createCashback(CashbackFactory.CashbackType.SpendingThreshold);
+        }
     }
 }

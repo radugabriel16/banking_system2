@@ -2,22 +2,19 @@ package org.poo.commands;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.account.Account;
 import org.poo.account.BusinessAccount;
 import org.poo.bank.Bank;
 import org.poo.converter.Converter;
 import org.poo.fileio.CommandInput;
 
-import java.io.Serializable;
-
 @Getter
 @Setter
-public class BusinessReport implements Command {
+public final class BusinessReport implements Command {
     private Converter convert;
     private CommandInput input;
     private Bank bank;
 
-    public BusinessReport(Converter convert, CommandInput input, Bank bank) {
+    public BusinessReport(final Converter convert, final CommandInput input, final Bank bank) {
         this.convert = convert;
         this.input = input;
         this.bank = bank;

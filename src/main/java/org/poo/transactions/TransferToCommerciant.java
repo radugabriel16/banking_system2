@@ -10,11 +10,15 @@ import org.poo.account.BusinessAccount;
 import org.poo.account.CommerciantAccount;
 import org.poo.bank.Bank;
 import org.poo.commerciants.Commerciant;
+import org.poo.exchange_rate.MoneyConversion;
+import org.poo.users.ServiceFactory;
+import org.poo.users.ServicePlan;
+import org.poo.users.Silver;
 import org.poo.users.User;
 
 @Getter
 @Setter
-public class TransferToCommerciant implements Transactions {
+public final class TransferToCommerciant implements Transactions {
     private Account accountSender;
     private CommerciantAccount accountReceiver;
     private double amount;
@@ -23,7 +27,9 @@ public class TransferToCommerciant implements Transactions {
     private int timeStamp;
     private boolean success = false;
 
-    public TransferToCommerciant(Account sender, CommerciantAccount receiver, double amount, String description, Bank bank, int timeStamp) {
+    public TransferToCommerciant(final Account sender, final CommerciantAccount receiver,
+                                 final double amount, final String description, final Bank bank,
+                                 final int timeStamp) {
         this.accountSender = sender;
         this.accountReceiver = receiver;
         this.amount = amount;
@@ -36,15 +42,29 @@ public class TransferToCommerciant implements Transactions {
     public void execute() {
         User user = bank.findUser(accountSender.getIban());
         double newAmount = amount;
-        newAmount += user.getServicePlan().calculateCommission(amount, bank, accountSender.getCurrency());
+        ServicePlan plan = user.getServicePlan();
+        newAmount += plan.calculateCommission(amount, bank, accountSender.getCurrency());
 
         if (accountSender.getBalance() >= newAmount) {
+            MoneyConversion conversion = bank.getMoneyConversion();
+            double amountRon = conversion.convertMoney(accountSender.getCurrency(), "RON", amount);
+            if (amountRon > 300 && user.getServicePlan().getPlan().equals("silver")) {
+                Silver silverPlan = (Silver) user.getServicePlan();
+                silverPlan.setPurchases(silverPlan.getPurchases() + 1);
+
+                // Possible to upgrade to gold
+                if (silverPlan.getPurchases() == 5) {
+                    ServicePlan newPlan = ServiceFactory.createService(ServiceFactory.ServiceType.Gold);
+                    user.setServicePlan(newPlan);
+                }
+            }
             Commerciant comm = accountReceiver.getCommerciant();
             if (accountSender.getType().equals("business")) {
-                BusinessAccount businessAccount = (BusinessAccount)accountSender;
+                BusinessAccount businessAccount = (BusinessAccount) accountSender;
                 Associate associate = businessAccount.getAssociate(user);
                 if (associate != null) {
-                    int result = associate.pay(amount, businessAccount, timeStamp, accountReceiver.getCommerciant());
+                    int result = associate.pay(amount, businessAccount, timeStamp,
+                            accountReceiver.getCommerciant());
                     if (result == 0) {
                         return;
                     } else if (!businessAccount.getCommerciants().contains(comm)) {
@@ -61,7 +81,7 @@ public class TransferToCommerciant implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(User user) {
+    public ObjectNode convertJson(final User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);

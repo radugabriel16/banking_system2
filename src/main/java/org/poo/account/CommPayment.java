@@ -11,7 +11,7 @@ public class CommPayment {
     private double amount;
     private Commerciant commerciant;
 
-    public CommPayment(int timeStamp, double amount, Commerciant commerciant) {
+    public CommPayment(final int timeStamp, final double amount, final Commerciant commerciant) {
         this.timeStamp = timeStamp;
         this.amount = amount;
         this.commerciant = commerciant;

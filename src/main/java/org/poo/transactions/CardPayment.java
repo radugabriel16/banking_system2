@@ -73,15 +73,15 @@ public final class CardPayment implements Transactions {
                 Commerciant com = bank.getCommerciant(commerciant);
 
                 if (account.getType().equals("business")) {
-                    BusinessAccount businessAccount = (BusinessAccount)account;
-
+                    BusinessAccount businessAccount = (BusinessAccount) account;
                     Associate associate = businessAccount.getAssociate(user);
                     if (associate != null) {
                         int result = associate.pay(amount, businessAccount, timeStamp, com);
-                        if (result == 0)
+                        if (result == 0) {
                             return;
-                        else if (!businessAccount.getCommerciants().contains(com))
+                        } else if (!businessAccount.getCommerciants().contains(com)) {
                             businessAccount.getCommerciants().add(com);
+                        }
                     }
                 }
 
@@ -101,7 +101,7 @@ public final class CardPayment implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(final User user) {
+    public ObjectNode convertJson(final User u) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);

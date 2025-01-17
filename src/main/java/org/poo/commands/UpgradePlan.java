@@ -10,13 +10,14 @@ import org.poo.transactions.ServiceUpdate;
 
 @Getter
 @Setter
-public class UpgradePlan implements Command {
+public final class UpgradePlan implements Command {
     private CommandInput input;
     private Bank bank;
     private ControlTransactions control;
     private Converter convert;
 
-    public UpgradePlan(CommandInput input, Bank bank, ControlTransactions control, Converter convert) {
+    public UpgradePlan(final CommandInput input, final Bank bank,
+                       final ControlTransactions control, final Converter convert) {
         this.input = input;
         this.bank = bank;
         this.control = control;

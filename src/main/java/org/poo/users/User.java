@@ -3,14 +3,11 @@ package org.poo.users;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
-import org.poo.commerciants.Commerciant;
-import org.poo.transactions.CardPayment;
 import org.poo.transactions.Transactions;
 import java.time.LocalDate;
 import java.time.Period;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 @Getter
 @Setter
@@ -62,44 +59,8 @@ public final class User implements Visitable {
     }
 
     /**
-     * It deducts the money spent on specific commerciants when the payment transaction was placed
-     * outside the interval of time. It`s used for spendings reports to know the amount spent for
-     * every one of them
-     * @param account representing the history we look at
-     * @return the updated list of commerciants
+     * @return the age of a user based on data extracted from "birthDate" string
      */
-
-    /*public ArrayList<Commerciant> editCommerciantsAmounts(final Account account, final int start,
-                                                          final int end) {
-        ArrayList<Commerciant> current = new ArrayList<>(account.getCommerciants());
-        ArrayList<Transactions> transactions = history;
-        for (Transactions transaction : transactions) {
-            if (transaction.spendingTransaction()) {
-                CardPayment payment = (CardPayment) transaction;
-                int timeStamp = transaction.getTimestamp();
-                if ((timeStamp < start || timeStamp > end) && payment.getIBAN()
-                        .equals(account.getIban())) {
-                    double amount = payment.getAmount();
-                    int index = account.findCommerciant(payment.getCommerciant());
-                    if (index != -1) {
-                        Commerciant comerciant = current.get(index);
-                        comerciant.setAmountReceived(comerciant.getAmountReceived() - amount);
-                    }
-                }
-            }
-        }
-        Iterator<Commerciant> iterator = current.iterator();
-        while (iterator.hasNext()) {
-            Commerciant commerciant = iterator.next();
-
-            // It means the only payment at this commerciant was placed outside this interval
-            if (commerciant.getAmountReceived() == 0) {
-                iterator.remove();
-            }
-        }
-        account.sortCommerciants(current);
-        return current;
-    }*/
 
     public int getAge() {
         String[] members = birthDate.split("-");
@@ -107,8 +68,8 @@ public final class User implements Visitable {
         int month = Integer.parseInt(members[1]);
         int day = Integer.parseInt(members[2]);
 
-        LocalDate birthDate = LocalDate.of(year, month, day);
-        Period period = Period.between(birthDate, LocalDate.now());
+        LocalDate birthTime = LocalDate.of(year, month, day);
+        Period period = Period.between(birthTime, LocalDate.now());
         return period.getYears();
     }
 }

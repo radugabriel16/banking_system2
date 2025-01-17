@@ -1,6 +1,5 @@
 package org.poo.transactions;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
@@ -10,12 +9,12 @@ import org.poo.users.User;
 
 @Getter
 @Setter
-public class AddInterestRate implements Transactions {
+public final class AddInterestRate implements Transactions {
     private SavingsAccount account;
     private int timeStamp;
     private double bonusMoney;
 
-    public AddInterestRate(SavingsAccount account, int timeStamp) {
+    public AddInterestRate(final SavingsAccount account, final int timeStamp) {
         this.account = account;
         this.timeStamp = timeStamp;
     }
@@ -27,7 +26,7 @@ public class AddInterestRate implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(User user) {
+    public ObjectNode convertJson(final User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);

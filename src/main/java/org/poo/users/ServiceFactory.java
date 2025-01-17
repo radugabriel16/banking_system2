@@ -5,7 +5,11 @@ public class ServiceFactory {
         Standard, Student, Silver, Gold
     }
 
-    public static ServicePlan createService(ServiceType type) {
+    /**
+     * Creates a specific service plan based on given type
+     */
+
+    public static ServicePlan createService(final ServiceType type) {
         switch (type) {
             case Standard: return new Standard();
             case Student: return new Student();

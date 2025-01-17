@@ -3,8 +3,6 @@ package org.poo.account;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.Bank;
-import org.poo.commerciants.Cashback;
-import org.poo.commerciants.CashbackFactory;
 import org.poo.commerciants.Commerciant;
 
 @Getter
@@ -12,15 +10,24 @@ import org.poo.commerciants.Commerciant;
 public class CommerciantAccount extends Account {
     private Bank bank;
 
-    public CommerciantAccount(double balance, String currency, String iban, Bank bank) {
+    public CommerciantAccount(final double balance, final String currency, final String iban,
+                              final Bank bank) {
         super(balance, currency, iban);
         this.bank = bank;
     }
+
+    /**
+     * @return the account type
+     */
 
     @Override
     public String getType() {
         return "commerciant";
     }
+
+    /**
+     * @return the commerciant whose account is this object
+     */
 
     public Commerciant getCommerciant() {
         for (Commerciant c : getBank().getCommerciants()) {

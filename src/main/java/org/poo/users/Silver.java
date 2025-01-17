@@ -6,16 +6,20 @@ import org.poo.bank.Bank;
 
 @Getter
 @Setter
-public class Silver implements ServicePlan {
+public final class Silver implements ServicePlan {
     private int purchases;
+    private static final int THRESHOLD = 500;
+    private static final double FACTOR = 0.001;
 
     @Override
-    public double calculateCommission(double amount, Bank bank, String currency) {
+    public double calculateCommission(final double amount, final Bank bank,
+                                      final String currency) {
         double amountInRon = bank.getMoneyConversion().convertMoney(currency, "RON", amount);
-        if (amountInRon < 500) {
+        if (amountInRon < THRESHOLD) {
             return 0;
-        } else
-            return 0.001 * amount;
+        } else {
+            return FACTOR * amount;
+        }
     }
 
     @Override

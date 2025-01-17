@@ -83,10 +83,11 @@ public final class SplitPayment implements Transactions {
         node.put("timestamp", timeStamp);
         double amount = amountPerPerson * accounts.size();
         String sum = String.valueOf(amount);
-        if (sum.charAt(sum.length() - 1) == '0' || sum.charAt(sum.length() - 2) == '.')
+        if (sum.charAt(sum.length() - 1) == '0' || sum.charAt(sum.length() - 2) == '.') {
             node.put("description", "Split payment of " + amount + "0" + " " + currency);
-        else
+        } else {
             node.put("description", "Split payment of " + amount + " " + currency);
+        }
         node.put("splitPaymentType", "equal");
         node.put("currency", currency);
         node.put("amount", amountPerPerson);

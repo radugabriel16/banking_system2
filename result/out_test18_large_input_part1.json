@@ -1094,6 +1094,13 @@
   } ],
   "timestamp" : 448
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 452,
+    "description" : "Card not found"
+  },
+  "timestamp" : 452
+}, {
   "command" : "deleteAccount",
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
@@ -1341,11 +1348,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3198.0230771428573,
+      "balance" : 3336.9670771428573,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -1650,11 +1657,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3198.0230771428573,
+      "balance" : 3336.9670771428573,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -1682,7 +1689,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -1714,12 +1721,19 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     } ]
   } ],
   "timestamp" : 460
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 464,
+    "description" : "Card not found"
+  },
+  "timestamp" : 464
 }, {
   "command" : "deleteAccount",
   "output" : {
@@ -1856,11 +1870,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     } ]
@@ -1968,11 +1982,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3198.0230771428573,
+      "balance" : 3336.9670771428573,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -2000,7 +2014,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -2032,7 +2046,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -2041,7 +2055,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     } ]
@@ -2183,11 +2197,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     } ]
@@ -2295,11 +2309,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3198.0230771428573,
+      "balance" : 3336.9670771428573,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -2327,7 +2341,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -2341,7 +2355,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
@@ -2359,7 +2373,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -2368,7 +2382,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -2377,7 +2391,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
@@ -2430,7 +2444,7 @@
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1733018068262537",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     } ]
@@ -2519,11 +2533,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     } ]
@@ -2631,11 +2645,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3198.0230771428573,
+      "balance" : 3336.9670771428573,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -2663,7 +2677,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -2677,7 +2691,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
@@ -2695,7 +2709,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -2704,7 +2718,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -2713,7 +2727,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     }, {
@@ -2722,7 +2736,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4766425843993312",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
@@ -2795,7 +2809,7 @@
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1733018068262537",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     }, {
@@ -2902,11 +2916,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     }, {
@@ -3020,11 +3034,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3409.1341882539687,
+      "balance" : 3548.0781882539686,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -3058,7 +3072,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -3072,7 +3086,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
@@ -3090,7 +3104,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -3099,7 +3113,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -3108,7 +3122,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     }, {
@@ -3117,7 +3131,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4766425843993312",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
@@ -3170,7 +3184,7 @@
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1733018068262537",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     }, {
@@ -3277,11 +3291,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     }, {
@@ -3395,11 +3409,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3409.1341882539687,
+      "balance" : 3548.0781882539686,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -3433,7 +3447,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -3447,7 +3461,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
@@ -3465,7 +3479,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -3474,7 +3488,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -3483,7 +3497,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     }, {
@@ -3492,12 +3506,40 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4766425843993312",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
   } ],
   "timestamp" : 531
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 543,
+    "description" : "Card not found"
+  },
+  "timestamp" : 543
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 545,
+    "description" : "Card not found"
+  },
+  "timestamp" : 545
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 565,
+    "description" : "Card not found"
+  },
+  "timestamp" : 565
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 579,
+    "description" : "Card not found"
+  },
+  "timestamp" : 579
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -3538,7 +3580,7 @@
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1733018068262537",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     }, {
@@ -3563,7 +3605,7 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 116.95283431883115,
+      "balance" : 341.5482394357142,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
@@ -3645,11 +3687,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     }, {
@@ -3763,11 +3805,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3409.1341882539687,
+      "balance" : 3548.0781882539686,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     } ]
@@ -3796,7 +3838,7 @@
       "currency" : "NZD",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "6988686155235949",
+        "cardNumber" : "4766425843993312",
         "status" : "active"
       } ]
     } ]
@@ -3810,7 +3852,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -3824,7 +3866,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
@@ -3842,7 +3884,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -3851,7 +3893,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -3860,7 +3902,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     }, {
@@ -3869,7 +3911,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4766425843993312",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
@@ -3888,12 +3930,40 @@
   },
   "timestamp" : 601
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 606,
+    "description" : "Card not found"
+  },
+  "timestamp" : 606
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 610,
+    "description" : "Card not found"
+  },
+  "timestamp" : 610
+}, {
   "command" : "deleteAccount",
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 611
   },
   "timestamp" : 611
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 615,
+    "description" : "Card not found"
+  },
+  "timestamp" : 615
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 623,
+    "description" : "Card not found"
+  },
+  "timestamp" : 623
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -3934,7 +4004,7 @@
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1733018068262537",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     }, {
@@ -3959,7 +4029,7 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 116.95283431883115,
+      "balance" : 341.5482394357142,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
@@ -3972,7 +4042,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2803408755782048",
+        "cardNumber" : "5254952026068544",
         "status" : "active"
       } ]
     } ]
@@ -4050,11 +4120,11 @@
     "email" : "Nick_van_de_Veen-Verhoeven@zoho.nl",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1822.8825000000002,
+      "balance" : 2133.105,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "2289183361654620",
         "status" : "active"
       } ]
     }, {
@@ -4083,7 +4153,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4435533800578624",
+        "cardNumber" : "2912280039644439",
         "status" : "active"
       } ]
     } ]
@@ -4121,11 +4191,11 @@
     "email" : "Lisandro_del_Andres@hushmail.es",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1381.0976400000002,
+      "balance" : 1384.50104,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2912280039644439",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     } ]
@@ -4177,11 +4247,11 @@
     "email" : "Donna_Zavala@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 3303.2560632539685,
+      "balance" : 3548.0781882539686,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0692077318511511",
+        "cardNumber" : "8696843716078966",
         "status" : "active"
       } ]
     }, {
@@ -4190,7 +4260,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4729060187716142",
+        "cardNumber" : "6988686155235949",
         "status" : "active"
       } ]
     }, {
@@ -4199,7 +4269,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9295697829422937",
+        "cardNumber" : "2803408755782048",
         "status" : "active"
       } ]
     } ]
@@ -4228,7 +4298,7 @@
       "currency" : "NZD",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "6988686155235949",
+        "cardNumber" : "4766425843993312",
         "status" : "active"
       } ]
     } ]
@@ -4238,11 +4308,11 @@
     "email" : "Marcus_Reed@hushmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 2315.0239666666666,
+      "balance" : 2269.0228030303033,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8145060794847555",
+        "cardNumber" : "4729060187716142",
         "status" : "active"
       } ]
     }, {
@@ -4251,7 +4321,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "5254952026068544",
+        "cardNumber" : "1733018068262537",
         "status" : "active"
       } ]
     } ]
@@ -4265,12 +4335,12 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     }, {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 332.6142857142857,
+      "balance" : 333.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
@@ -4279,11 +4349,11 @@
       } ]
     }, {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 304.4813636363636,
+      "balance" : 346.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -4292,7 +4362,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -4301,7 +4371,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     }, {
@@ -4310,7 +4380,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "4766425843993312",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
@@ -4320,7 +4390,7 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO53POOB7122855990652257",
-    "balance" : 116.95283431883115,
+    "balance" : 341.5482394357142,
     "currency" : "EUR",
     "spending limit" : 357.0,
     "deposit limit" : 100.0,
@@ -4356,10 +4426,10 @@
       "deposited" : 0.0
     }, {
       "username" : "Picard Alain",
-      "spent" : 226.41054545454546,
+      "spent" : 0.0,
       "deposited" : 0.0
     } ],
-    "total spent" : 784.2848668831169,
+    "total spent" : 557.8743214285714,
     "total deposited" : 899.0
   },
   "timestamp" : 630

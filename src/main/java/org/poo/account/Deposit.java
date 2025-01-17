@@ -9,7 +9,7 @@ public class Deposit {
     private int timeStamp;
     private double amount;
 
-    public Deposit(int timeStamp, double amount) {
+    public Deposit(final int timeStamp, final double amount) {
         this.timeStamp = timeStamp;
         this.amount = amount;
     }

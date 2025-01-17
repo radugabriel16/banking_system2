@@ -3,9 +3,7 @@ package org.poo.commands;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
-import org.poo.account.Associate;
 import org.poo.account.BusinessAccount;
-import org.poo.account.Employee;
 import org.poo.bank.Bank;
 import org.poo.converter.Converter;
 import org.poo.fileio.CommandInput;
@@ -13,12 +11,12 @@ import org.poo.users.User;
 
 @Getter
 @Setter
-public class ChangeDepositLimit implements Command {
+public final class ChangeDepositLimit implements Command {
     private CommandInput input;
     private Bank bank;
     private Converter convert;
 
-    public ChangeDepositLimit(CommandInput input, Bank bank, Converter convert) {
+    public ChangeDepositLimit(final CommandInput input, final Bank bank, final Converter convert) {
         this.input = input;
         this.bank = bank;
         this.convert = convert;

@@ -9,7 +9,7 @@ public class Payment {
     private int timeStamp;
     private double amount;
 
-    public Payment(int timeStamp, double amount) {
+    public Payment(final int timeStamp, final double amount) {
         this.timeStamp = timeStamp;
         this.amount = amount;
     }

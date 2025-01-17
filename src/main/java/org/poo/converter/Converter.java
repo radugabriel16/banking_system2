@@ -12,8 +12,6 @@ import org.poo.transactions.CardPayment;
 import org.poo.transactions.Transactions;
 import org.poo.users.User;
 
-import java.lang.reflect.Array;
-import java.security.Key;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -285,20 +283,29 @@ public final class Converter {
         output.add(text);
     }
 
+    /**
+     * Converts error in case the card or user is not found
+     */
+
     public void cashWithdrawalError(final int timeStamp, final int errorType) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
         text.put("command", "cashWithdrawal");
         ObjectNode message = mapper.createObjectNode();
         message.put("timestamp", timeStamp);
-        if (errorType == 1)
+        if (errorType == 1) {
             message.put("description", "Card not found");
-        else
+        } else {
             message.put("description", "User not found");
+        }
         text.set("output", message);
         text.put("timestamp", timeStamp);
         output.add(text);
     }
+
+    /**
+     * Converts error in case user is not found
+     */
 
     public void sendMoneyError(final int timeStamp) {
         ObjectMapper mapper = new ObjectMapper();
@@ -312,6 +319,10 @@ public final class Converter {
         output.add(text);
     }
 
+    /**
+     * Converts error in case an associate tries to change a limit
+     */
+
     public void notOwnerError(final int timeStamp) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
@@ -323,6 +334,10 @@ public final class Converter {
         text.put("timestamp", timeStamp);
         output.add(text);
     }
+
+    /**
+     * Converts error in case a user is already part of a business account
+     */
 
     public void alreadyAssociateError(final int timeStamp) {
         ObjectMapper mapper = new ObjectMapper();
@@ -336,7 +351,12 @@ public final class Converter {
         output.add(text);
     }
 
-    public void transactionsBusiness(int timeStamp, int start, int end, BusinessAccount account) {
+    /**
+     * Converts the business report of type "transaction"
+     */
+
+    public void transactionsBusiness(final int timeStamp, final int start, final int end,
+                                     final BusinessAccount account) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
         text.put("command", "businessReport");
@@ -353,7 +373,8 @@ public final class Converter {
         for (Associate associate : account.getAssociates()) {
             if (associate.getType().equals("manager")) {
                 ObjectNode manager = mapper.createObjectNode();
-                manager.put("username", associate.getUser().getLastName() + " " + associate.getUser().getFirstName());
+                manager.put("username", associate.getUser().getLastName() + " "
+                        + associate.getUser().getFirstName());
                 manager.put("spent", associate.getSpent(start, end));
                 manager.put("deposited", associate.getDeposited(start, end));
                 managers.add(manager);
@@ -366,7 +387,8 @@ public final class Converter {
         for (Associate associate : account.getAssociates()) {
             if (associate.getType().equals("employee")) {
                 ObjectNode employee = mapper.createObjectNode();
-                employee.put("username", associate.getUser().getLastName() + " " + associate.getUser().getFirstName());
+                employee.put("username", associate.getUser().getLastName() + " "
+                        + associate.getUser().getFirstName());
                 employee.put("spent", associate.getSpent(start, end));
                 employee.put("deposited", associate.getDeposited(start, end));
                 employees.add(employee);
@@ -381,7 +403,12 @@ public final class Converter {
         output.add(text);
     }
 
-    public void commerciantBusiness(int timeStamp, int start, int end, BusinessAccount account) {
+    /**
+     * Converts the business report of type "commerciant"
+     */
+
+    public void commerciantBusiness(final int timeStamp, final int start, final int end,
+                                    final BusinessAccount account) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
         text.put("command", "businessReport");
@@ -399,7 +426,7 @@ public final class Converter {
         for (Commerciant commerciant : account.getCommerciants()) {
             ObjectNode c = mapper.createObjectNode();
             c.put("commerciant", commerciant.getName());
-            c.put("totalReceived", commerciant.getAmountReceived());
+            c.put("total received", commerciant.getAmountReceived());
 
             List<Manager> managers = account.getManagersInvolved(commerciant);
             managers.sort(new SortManagers());
@@ -409,7 +436,8 @@ public final class Converter {
 
             ArrayNode m = mapper.createArrayNode();
             for (Manager manager : managers) {
-                String name = manager.getUser().getLastName() + " " + manager.getUser().getFirstName();
+                String name = manager.getUser().getLastName() + " "
+                        + manager.getUser().getFirstName();
                 m.add(name);
             }
 
@@ -417,7 +445,8 @@ public final class Converter {
 
             ArrayNode e = mapper.createArrayNode();
             for (Employee employee : employees) {
-                String name = employee.getUser().getLastName() + " " + employee.getUser().getFirstName();
+                String name = employee.getUser().getLastName() + " "
+                        + employee.getUser().getFirstName();
                 e.add(name);
             }
 
@@ -430,7 +459,11 @@ public final class Converter {
         output.add(text);
     }
 
-    public void notFoundAccount(int timeStamp) {
+    /**
+     * Converts error in case an account is not found
+     */
+
+    public void notFoundAccount(final int timeStamp) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
         text.put("command", "upgradePlan");
@@ -442,13 +475,18 @@ public final class Converter {
         output.add(text);
     }
 
-    public void splitPaymentError(final int timeStamp, int type) {
+    /**
+     * Converts error in case a user is not found
+     */
+
+    public void splitPaymentError(final int timeStamp, final int type) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode text = mapper.createObjectNode();
-        if (type == 1)
+        if (type == 1) {
             text.put("command", "acceptSplitPayment");
-        else
+        } else {
             text.put("command", "rejectSplitPayment");
+        }
 
         ObjectNode message = mapper.createObjectNode();
         message.put("timestamp", timeStamp);

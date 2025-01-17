@@ -1,7 +1,6 @@
 package org.poo.account;
 
 import org.poo.bank.Bank;
-import org.poo.commerciants.Cashback;
 
 public class AccountFactory {
     public enum AccountType {
@@ -20,7 +19,8 @@ public class AccountFactory {
             case classic: return new ClassicAccount(balance, currency, iban);
             case savings: return new SavingsAccount(balance, currency, iban, (double) params[0]);
             case business: return new BusinessAccount(balance, currency, iban);
-            case commerciant: return new CommerciantAccount(balance, currency, iban, (Bank) params[0]);
+            case commerciant: return new CommerciantAccount(balance, currency, iban,
+                    (Bank) params[0]);
             default: throw new IllegalArgumentException("That account type is not supported");
         }
     }

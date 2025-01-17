@@ -2,7 +2,6 @@ package org.poo.commands;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.account.Account;
 import org.poo.bank.Bank;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.ControlTransactions;
@@ -10,7 +9,7 @@ import org.poo.transactions.ExtractMoney;
 
 @Getter
 @Setter
-public class Withdraw implements Command {
+public final class Withdraw implements Command {
     private CommandInput input;
     private Bank bank;
     private ControlTransactions control;
@@ -32,7 +31,8 @@ public class Withdraw implements Command {
 
         ExtractMoney extract = new ExtractMoney(timeStamp, currency, amount, iban, bank);
         control.edit(extract, bank.findUser(iban));
-        if (extract.getDoubleMessage() == 1)
+        if (extract.getDoubleMessage() == 1) {
             bank.findUser(iban).getHistory().add(extract);
+        }
     }
 }

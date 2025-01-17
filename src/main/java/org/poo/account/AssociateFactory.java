@@ -7,6 +7,11 @@ public class AssociateFactory {
         manager, employee
     }
 
+    /**
+     * It`s used to create an associate based on specific parameters
+     * @return exactly what type of associate it`s desired
+     */
+
     public static Associate createAssociate(final AssociateType type, final User user) {
         switch (type) {
             case manager: return new Manager(user);

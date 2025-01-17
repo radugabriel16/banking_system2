@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.bank.Bank;
+import org.poo.exchange_rate.MoneyConversion;
 import org.poo.users.User;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class SplitCustom implements Transactions {
+public final class SplitCustom implements Transactions {
     private int timeStamp;
     private String currency;
     private double amount;
@@ -26,8 +27,9 @@ public class SplitCustom implements Transactions {
     private String currentIban;
     private int status;
 
-    public SplitCustom(int timeStamp, String currency, double amountTotal, List<Double> amount, Bank bank, List<String> iban,
-                       int status) {
+    public SplitCustom(final int timeStamp, final String currency, final double amountTotal,
+                       final List<Double> amount, final Bank bank, final List<String> iban,
+                       final int status) {
         this.timeStamp = timeStamp;
         this.currency = currency;
         this.bank = bank;
@@ -60,7 +62,8 @@ public class SplitCustom implements Transactions {
                 if (accounts.get(i) != null) {
                     String accountCurrency = accounts.get(i).getCurrency();
                     double sum = amountList.get(i);
-                    double neededMoney = bank.getMoneyConversion().convertMoney(currency, accountCurrency, sum);
+                    MoneyConversion conversion = bank.getMoneyConversion();
+                    double neededMoney = conversion.convertMoney(currency, accountCurrency, sum);
                     if (neededMoney > accounts.get(i).getBalance()) {
                         success = false;
                         notEnoughMoney = accounts.get(i).getIban();
@@ -80,21 +83,22 @@ public class SplitCustom implements Transactions {
     }
 
     @Override
-    public ObjectNode convertJson(User user) {
+    public ObjectNode convertJson(final User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);
         String sum = String.valueOf(amount);
-        if (sum.charAt(sum.length() - 1) == '0' || sum.charAt(sum.length() - 2) == '.')
+        if (sum.charAt(sum.length() - 1) == '0' || sum.charAt(sum.length() - 2) == '.') {
             node.put("description", "Split payment of " + amount + "0 " + currency);
-        else
+        } else {
             node.put("description", "Split payment of " + amount + " " + currency);
+        }
         node.put("splitPaymentType", "custom");
         node.put("currency", currency);
 
         ArrayNode amountArray = mapper.createArrayNode();
-        for (Double amount : amountList) {
-            amountArray.add(amount);
+        for (Double newAmount : amountList) {
+            amountArray.add(newAmount);
         }
         node.set("amountForUsers", amountArray);
         ArrayNode ibanArray = mapper.createArrayNode();

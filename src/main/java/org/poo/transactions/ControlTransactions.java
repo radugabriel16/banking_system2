@@ -51,8 +51,9 @@ public final class ControlTransactions {
                             break;
                         }
                     }
-                    if (added == 0)
+                    if (added == 0) {
                         user.get(i).getHistory().add(copy);
+                    }
                 } else {
                     SplitCustom payment = (SplitCustom) transaction;
                     SplitCustom copy = new SplitCustom(payment);
@@ -64,8 +65,9 @@ public final class ControlTransactions {
                             break;
                         }
                     }
-                    if (added == 0)
+                    if (added == 0) {
                         user.get(i).getHistory().add(copy);
+                    }
                 }
             }
         }

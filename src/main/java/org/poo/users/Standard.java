@@ -2,12 +2,13 @@ package org.poo.users;
 
 import org.poo.bank.Bank;
 
-import java.io.Serializable;
+public final class Standard implements ServicePlan {
+    private static final double FACTOR = 0.002;
 
-public class Standard implements ServicePlan {
     @Override
-    public double calculateCommission(double amount, Bank bank, String currency) {
-        return 0.002 * amount;
+    public double calculateCommission(final double amount, final Bank bank,
+                                      final String currency) {
+        return FACTOR * amount;
     }
 
     @Override

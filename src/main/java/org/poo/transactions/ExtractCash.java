@@ -7,11 +7,13 @@ import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.bank.Bank;
 import org.poo.card.Card;
+import org.poo.exchange_rate.MoneyConversion;
+import org.poo.users.ServicePlan;
 import org.poo.users.User;
 
 @Getter
 @Setter
-public class ExtractCash implements Transactions {
+public final class ExtractCash implements Transactions {
     private int timeStamp;
     private String email;
     private String cardNumber;
@@ -19,9 +21,12 @@ public class ExtractCash implements Transactions {
     private String location;
     private int messageType;
     private Bank bank;
+    private static final int MESSAGE1 = 1;
+    private static final int MESSAGE2 = 2;
+    private static final int MESSAGE3 = 3;
 
-    public ExtractCash(int timeStamp, String email, String cardNumber, double amount, String location,
-                        Bank bank) {
+    public ExtractCash(final int timeStamp, final String email, final String cardNumber,
+                       final double amount, final String location, final Bank bank) {
         this.timeStamp = timeStamp;
         this.email = email;
         this.cardNumber = cardNumber;
@@ -35,37 +40,39 @@ public class ExtractCash implements Transactions {
         User user = bank.findUser(email);
         Card card = bank.findCard(cardNumber);
         if (card.getStatus().equals("frozen")) {
-            messageType = 1;
+            messageType = MESSAGE1;
             return;
         }
         Account account = bank.findParentAccount(cardNumber);
-        double newAmount = bank.getMoneyConversion().convertMoney("RON", account.getCurrency(), amount);
-        newAmount += user.getServicePlan().calculateCommission(newAmount, bank, account.getCurrency());
+        MoneyConversion conversion = bank.getMoneyConversion();
+        double newAmount = conversion.convertMoney("RON", account.getCurrency(), amount);
+        ServicePlan plan = user.getServicePlan();
+        newAmount += plan.calculateCommission(newAmount, bank, account.getCurrency());
 
         if (account.getBalance() < newAmount) {
-            messageType = 2;
+            messageType = MESSAGE2;
             return;
         }
         else if (account.getBalance() - newAmount <= account.getMinBalance()) {
-            messageType = 3;
+            messageType = MESSAGE3;
             return;
         }
         account.setBalance(account.getBalance() - newAmount);
     }
 
     @Override
-    public ObjectNode convertJson(User user) {
+    public ObjectNode convertJson(final User user) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode node = mapper.createObjectNode();
         node.put("timestamp", timeStamp);
         if (messageType == 0) {
             node.put("description", "Cash withdrawal of " + amount);
             node.put("amount", amount);
-        } else if (messageType == 1) {
+        } else if (messageType == MESSAGE1) {
             node.put("description", "The card is frozen");
-        } else if (messageType == 2) {
+        } else if (messageType == MESSAGE2) {
             node.put("description", "Insufficient funds");
-        } else if (messageType == 3) {
+        } else if (messageType == MESSAGE3) {
             node.put("description", "Cannot perform payment due to a minimum balance being set");
         }
         return node;

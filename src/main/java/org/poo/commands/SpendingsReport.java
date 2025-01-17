@@ -4,12 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
 import org.poo.bank.Bank;
-import org.poo.commerciants.Commerciant;
 import org.poo.converter.Converter;
 import org.poo.fileio.CommandInput;
 import org.poo.users.User;
-
-import java.util.ArrayList;
 
 @Getter
 @Setter

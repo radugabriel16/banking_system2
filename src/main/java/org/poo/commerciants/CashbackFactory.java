@@ -5,7 +5,11 @@ public class CashbackFactory {
         NrOfTransactions, SpendingThreshold
     }
 
-    public static Cashback createCashback(CashbackType type) {
+    /**
+     * @return the desired type of cashback based on a given type
+     */
+
+    public static Cashback createCashback(final CashbackType type) {
         switch (type) {
             case NrOfTransactions: return new NrOfTransactions();
             case SpendingThreshold: return new SpendingThreshold();

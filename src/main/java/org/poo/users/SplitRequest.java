@@ -2,10 +2,8 @@ package org.poo.users;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.account.Account;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Getter
@@ -21,8 +19,9 @@ public class SplitRequest {
     private int timeStamp;
     private String currency;
 
-    public SplitRequest(ArrayList<User> users, List<String> accounts, List<Double> amountList,
-                        double amount, String type, int timeStamp, String currency) {
+    public SplitRequest(final ArrayList<User> users, final List<String> accounts,
+                        final List<Double> amountList, final double amount, final String type,
+                        final int timeStamp, final String currency) {
         this.involved = users;
         this.copy = new ArrayList<>();
         this.copy.addAll(users);
@@ -34,7 +33,13 @@ public class SplitRequest {
         this.currency = currency;
     }
 
-    public void decide(User user, String response) {
+    /**
+     * Every involved user have to decide
+     * In case the answer is positive, the user is removed from the array and if it becomes empty
+     * it means the request is approved
+     */
+
+    public void decide(final User user, final String response) {
         if (response.equals("accepted")) {
             copy.remove(user);
             if (copy.isEmpty()) {

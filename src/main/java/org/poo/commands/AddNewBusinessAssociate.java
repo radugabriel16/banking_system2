@@ -12,12 +12,13 @@ import org.poo.users.User;
 
 @Getter
 @Setter
-public class AddNewBusinessAssociate implements Command {
+public final class AddNewBusinessAssociate implements Command {
     private CommandInput input;
     private Bank bank;
     private Converter convert;
 
-    public AddNewBusinessAssociate(CommandInput input, Bank bank, Converter convert) {
+    public AddNewBusinessAssociate(final CommandInput input, final Bank bank,
+                                   final Converter convert) {
         this.input = input;
         this.bank = bank;
         this.convert = convert;
@@ -42,10 +43,12 @@ public class AddNewBusinessAssociate implements Command {
 
         Associate associate;
         if (role.equals("manager")) {
-            associate = AssociateFactory.createAssociate(AssociateFactory.AssociateType.manager, user);
+            associate = AssociateFactory.createAssociate(AssociateFactory.AssociateType.manager,
+                    user);
             account.getAssociates().add(associate);
         } else if (role.equals("employee")) {
-            associate = AssociateFactory.createAssociate(AssociateFactory.AssociateType.employee, user);
+            associate = AssociateFactory.createAssociate(AssociateFactory.AssociateType.employee,
+                    user);
             account.getAssociates().add(associate);
         }
     }

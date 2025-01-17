@@ -90,8 +90,7 @@ public final class Main {
 
         for (CommandInput input : inputData.getCommands()) {
             Command command = CommandFactory.createCommand(input, newBank, converter, control);
-            if (command != null) // inca nu sunt implementate toate comenzile
-                command.execute();
+            command.execute();
         }
         Utils.resetRandom();
 

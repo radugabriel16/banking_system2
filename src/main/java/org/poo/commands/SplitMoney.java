@@ -5,7 +5,6 @@ import lombok.Setter;
 import org.poo.bank.Bank;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.ControlTransactions;
-import org.poo.transactions.SplitPayment;
 import org.poo.users.SplitRequest;
 import org.poo.users.User;
 

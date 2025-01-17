@@ -2,9 +2,10 @@ package org.poo.users;
 
 import org.poo.bank.Bank;
 
-public class Gold implements ServicePlan {
+public final class Gold implements ServicePlan {
     @Override
-    public double calculateCommission(double amount, Bank bank, String currency) {
+    public double calculateCommission(final double amount, final Bank bank,
+                                      final String currency) {
         return 0;
     }
 

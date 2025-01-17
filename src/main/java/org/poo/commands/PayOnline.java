@@ -3,6 +3,7 @@ package org.poo.commands;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.account.Account;
+import org.poo.account.BusinessAccount;
 import org.poo.bank.Bank;
 import org.poo.card.Card;
 import org.poo.converter.Converter;
@@ -10,6 +11,7 @@ import org.poo.fileio.CommandInput;
 import org.poo.transactions.CardPayment;
 import org.poo.transactions.ControlTransactions;
 import org.poo.transactions.CreateCard;
+import org.poo.users.User;
 
 @Getter
 @Setter
@@ -36,9 +38,29 @@ public final class PayOnline implements Command {
         String commerciant = input.getCommerciant();
         String email = input.getEmail();
         int timeStamp = input.getTimestamp();
-        if (bank.findOwnerCard(cardNumber) == null) {
+
+        boolean ok = false;
+        for (User user : bank.getBankUsers()) {
+            for (Account account : user.getAccounts()) {
+                if (account.getType().equals("business")) {
+                    BusinessAccount businessAccount = (BusinessAccount) account;
+                    if ((businessAccount.isUserInvolved(bank.findUser(email))
+                        && !businessAccount.isUserInvolved(bank.findOwnerCard(cardNumber)))
+                        || (!businessAccount.isUserInvolved(bank.findUser(email))
+                            && businessAccount.isUserInvolved(bank.findOwnerCard(cardNumber)))) {
+                        convert.cardPayment(timeStamp);
+                        return;
+                    } else if (businessAccount.isUserInvolved(bank.findUser(email))
+                                && businessAccount.isUserInvolved(bank.findOwnerCard(cardNumber))) {
+                        ok = true;
+                    }
+                }
+            }
+        }
+
+        if (bank.findOwnerCard(cardNumber) == null && !ok) {
             convert.cardPayment(timeStamp);
-        } else if (amount > 0){
+        } else if (amount > 0) {
             Card card = bank.findCard(cardNumber);
             Account account = bank.findParentAccount(cardNumber);
             CardPayment payment = new CardPayment(cardNumber, amount, currency,

@@ -12,8 +12,6 @@ import org.poo.transactions.TransferMoney;
 import org.poo.transactions.TransferToCommerciant;
 import org.poo.users.User;
 
-import java.awt.desktop.SystemSleepEvent;
-
 @Getter
 @Setter
 public final class SendMoney implements Command {
